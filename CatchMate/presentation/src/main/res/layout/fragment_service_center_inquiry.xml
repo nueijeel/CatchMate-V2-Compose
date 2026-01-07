@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey0"
+    tools:context=".view.support.ServiceCenterInquiryFragment" >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left_service_center_inquiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="18dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right_service_center_inquiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="18dp" />
+
+    <ImageView
+        android:id="@+id/imgbtn_back_service_center_inquiry"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/vec_all_left_arrow_20dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center_inquiry"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_service_center_inquiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/service_center_inquiry_title"
+        android:textAppearance="@style/Typography.Body02.Medium"
+        android:textColor="@color/grey500"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center_inquiry"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtn_back_service_center_inquiry" />
+
+    <ImageView
+        android:id="@+id/iv_essential_mark_service_center_inquiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/vec_all_essential_mark_6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_service_center_inquiry"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_service_center_inquiry"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_service_center_inquiry" />
+
+    <TextView
+        android:id="@+id/tv_content_letter_count_service_center_inquiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAppearance="@style/Typography.Body02.Medium"
+        android:textColor="@color/grey500"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_content_letter_count_limit_service_center_inquiry"
+        app:layout_constraintEnd_toStartOf="@+id/tv_content_letter_count_limit_service_center_inquiry"
+        app:layout_constraintTop_toTopOf="@+id/tv_content_letter_count_limit_service_center_inquiry" />
+
+    <TextView
+        android:id="@+id/tv_content_letter_count_limit_service_center_inquiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service_center_inquiry_content_letter_count_limit"
+        android:textAppearance="@style/Typography.Body02.Medium"
+        android:textColor="@color/grey500"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_service_center_inquiry"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center_inquiry"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_service_center_inquiry" />
+
+    <EditText
+        android:id="@+id/edt_content_service_center_inquiry"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/selector_all_edt_bg"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="@string/post_edt_hint_additional_info"
+        android:inputType="text|textMultiLine"
+        android:maxLength="500"
+        android:overScrollMode="always"
+        android:paddingLeft="@dimen/small"
+        android:paddingTop="17dp"
+        android:paddingRight="@dimen/small"
+        android:paddingBottom="17dp"
+        android:scrollbars="vertical"
+        android:textAppearance="@style/Typography.Body02.SemiBold"
+        android:textColor="@color/grey800"
+        android:textColorHint="@color/grey400"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center_inquiry"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center_inquiry"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_service_center_inquiry" />
+
+    <include
+        android:id="@+id/layout_footer_service_center_inquiry"
+        layout="@layout/layout_footer_one_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

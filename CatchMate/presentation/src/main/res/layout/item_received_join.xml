@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_item_received_join_board_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_received_join_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Typography.Body03.Medium"
+            android:textColor="@color/brand500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="6월 9일 수요일" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/xstiny"
+            android:layout_marginBottom="2dp"
+            android:text="|"
+            android:textAppearance="@style/Typography.Body03.Medium"
+            android:textColor="@color/brand500"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_received_join_item_date"
+            app:layout_constraintStart_toEndOf="@+id/tv_received_join_item_date"
+            app:layout_constraintTop_toTopOf="@+id/tv_received_join_item_date" />
+
+        <TextView
+            android:id="@+id/tv_received_join_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/xstiny"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:textAppearance="@style/Typography.Body03.Medium"
+            android:textColor="@color/brand500"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            tools:text="17:00" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/xstiny"
+            android:text="|"
+            android:textAppearance="@style/Typography.Body03.Medium"
+            android:textColor="@color/brand500"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_received_join_item_time"
+            app:layout_constraintStart_toEndOf="@+id/tv_received_join_item_time"
+            app:layout_constraintTop_toTopOf="@+id/tv_received_join_item_time" />
+
+        <TextView
+            android:id="@+id/tv_received_join_item_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/xstiny"
+            android:textAppearance="@style/Typography.Body03.Medium"
+            android:textColor="@color/brand500"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            tools:text="사직" />
+
+        <TextView
+            android:id="@+id/tv_received_join_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Typography.Body01.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_received_join_item_date"
+            tools:text="카리나 시구 보러 같이 가실 분" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_received_join_item_move"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:tint="@color/grey500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/vec_all_right_arrow_20dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_received_join_item_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_item_received_join_board_info"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_profile" />
+</androidx.constraintlayout.widget.ConstraintLayout>

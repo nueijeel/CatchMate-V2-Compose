@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/grey0"
+    android:paddingLeft="13dp"
+    android:paddingRight="16dp">
+
+    <ImageButton
+        android:id="@+id/imgbtn_header_text_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@null"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vec_all_left_arrow_20dp" />
+
+    <TextView
+        android:id="@+id/tv_header_text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:textAppearance="@style/Typography.HeadLine03.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgbtn_header_text_back"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Text" />
+
+    <TextView
+        android:id="@+id/tv_header_text_unread_message_count_badge"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="@dimen/tiny"
+        android:background="@drawable/shape_chatting_unread_message_count"
+        android:gravity="center"
+        android:textAppearance="@style/Typography.Caption01.Medium"
+        android:textColor="@color/grey0"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_header_text_title"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2" />
+
+    <TextView
+        android:id="@+id/tv_header_text_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:textAppearance="@style/Typography.Body02.Medium"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

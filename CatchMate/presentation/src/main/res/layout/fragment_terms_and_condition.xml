@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey0"
+    tools:context=".view.onboarding.TermsAndConditionFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_terms_and_condition_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_terms_and_condition_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <include
+        android:id="@+id/layout_header_terms_and_condition"
+        layout="@layout/layout_header_onboarding"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_terms_and_condition_title_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/tac_title_1"
+        android:textAppearance="@style/Typography.HeadLine01.Regular"
+        app:layout_constraintStart_toStartOf="@+id/guideline_terms_and_condition_left"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header_terms_and_condition" />
+
+    <TextView
+        android:id="@+id/tv_terms_and_condition_title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tac_title_2"
+        android:textAppearance="@style/Typography.HeadLine01.Regular"
+        app:layout_constraintStart_toStartOf="@+id/guideline_terms_and_condition_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_terms_and_condition_title_1" />
+
+    <ImageView
+        android:id="@+id/iv_essential_mark_terms_and_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/vec_all_essential_mark_6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_terms_and_condition_title_2"
+        app:layout_constraintStart_toEndOf="@+id/tv_terms_and_condition_title_2"
+        app:layout_constraintTop_toTopOf="@+id/tv_terms_and_condition_title_2" />
+
+    <LinearLayout
+        android:id="@+id/layout_all_check_terms_and_condition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/shape_all_rect_r8_grey50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_terms_and_condition_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_terms_and_condition_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_terms_and_condition_title_2">
+
+        <CheckBox
+            android:id="@+id/cb_all_check_terms_and_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/selector_all_check_btn"
+            android:clickable="false" />
+
+        <TextView
+            android:id="@+id/tv_all_check_terms_and_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="@string/tac_all_check_title"
+            android:textAppearance="@style/Typography.Body01.SemiBold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_terms_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tac_terms_title"
+        android:textAppearance="@style/Typography.Body02.Medium"
+        android:textColor="@color/grey500"
+        app:layout_constraintStart_toStartOf="@+id/guideline_terms_and_condition_left"
+        app:layout_constraintTop_toBottomOf="@+id/layout_all_check_terms_and_condition" />
+
+    <LinearLayout
+        android:id="@+id/layout_check_first_terms_and_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_terms_and_condition_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_terms_title">
+
+        <CheckBox
+            android:id="@+id/cb_check_first_terms_and_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/selector_all_check_btn"
+            android:clickable="false" />
+
+        <TextView
+            android:id="@+id/tv_check_first_terms_and_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="@string/tac_content_1"
+            android:textAppearance="@style/Typography.Body02.Medium"
+            android:textColor="@color/grey700" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_check_second_terms_and_condition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_terms_and_condition_left"
+        app:layout_constraintTop_toBottomOf="@+id/layout_check_first_terms_and_condition">
+
+        <CheckBox
+            android:id="@+id/cb_check_second_terms_and_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/selector_all_check_btn"
+            android:clickable="false" />
+
+        <TextView
+            android:id="@+id/tv_check_second_terms_and_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="@string/tac_content_2"
+            android:textAppearance="@style/Typography.Body02.Medium"
+            android:textColor="@color/grey700" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_check_third_terms_and_condition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_terms_and_condition_left"
+        app:layout_constraintTop_toBottomOf="@+id/layout_check_second_terms_and_condition">
+
+        <CheckBox
+            android:id="@+id/cb_check_third_terms_and_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/selector_all_check_btn"
+            android:clickable="false" />
+
+        <TextView
+            android:id="@+id/tv_check_third_terms_and_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="@string/tac_content_3"
+            android:textAppearance="@style/Typography.Body02.Medium"
+            android:textColor="@color/grey700" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_check_first_terms_and_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:src="@drawable/vec_all_right_arrow_20dp"
+        android:tint="@color/grey500"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_check_first_terms_and_condition"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_terms_and_condition_right"
+        app:layout_constraintTop_toTopOf="@+id/layout_check_first_terms_and_condition" />
+
+    <ImageView
+        android:id="@+id/iv_check_second_terms_and_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:src="@drawable/vec_all_right_arrow_20dp"
+        android:tint="@color/grey500"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_check_second_terms_and_condition"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_terms_and_condition_right"
+        app:layout_constraintTop_toTopOf="@+id/layout_check_second_terms_and_condition" />
+
+    <ImageView
+        android:id="@+id/iv_check_third_terms_and_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:src="@drawable/vec_all_right_arrow_20dp"
+        android:tint="@color/grey500"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_check_third_terms_and_condition"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_terms_and_condition_right"
+        app:layout_constraintTop_toTopOf="@+id/layout_check_third_terms_and_condition" />
+
+    <include
+        android:id="@+id/layout_footer_terms_and_condition"
+        layout="@layout/layout_footer_one_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

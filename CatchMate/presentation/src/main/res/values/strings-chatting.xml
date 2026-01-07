@@ -1,0 +1,23 @@
+<resources>
+    <string name="chatting_home_title">채팅</string>
+    <string name="chatting_system_alert_title">경기 종료 후 7일이 지나면\n채팅방이 자동으로 삭제됩니다\n참고해주세요</string>
+    <string name="chatting_room_chat_box_hint">내용을 입력해주세요</string>
+
+    <string name="chatting_setting_title">채팅방 설정</string>
+    <string name="chatting_setting_participant">참여자 정보</string>
+    <string name="chatting_setting_me_badge">나</string>
+    <string name="chatting_setting_kick_out">내보내기</string>
+
+    <string name="chatting_participant_alert">%s 님이 채팅에 참여했어요</string>
+    <string name="chatting_start_message">채팅을 시작해보세요</string>
+    <string name="chatting_leave_dialog_title">채팅방을 나갈까요?</string>
+    <string name="chatting_leave_dialog_positive_button">나가기</string>
+
+    <string name="chatting_retry_fail">서버에 연결할 수 없습니다. 나중에 다시 시도해주세요.</string>
+    <string name="chatting_connect_instability">채팅방 연결이 불안정합니다.</string>
+    <string name="chatting_message_send_fail">메시지 전송에 실패하였습니다. 잠시 후 다시 시도해 주세요.</string>
+    <string name="chatting_leave_room_fail">"채팅방을 나갈 수 없어요. 잠시 후 다시 시도해 주세요."</string>
+
+    <string name="chatting_no_list_title">참여한 채팅이 없어요</string>
+    <string name="chatting_no_list_content">마음에 드는 직관 글에 참여하여\n채팅을 시작해보세요!</string>
+</resources>

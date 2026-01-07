@@ -1,0 +1,7 @@
+<resources>
+    <string name="notification_title">알림</string>
+    <string name="notification_no_list_message">받은 알림이 없어요</string>
+    <string name="notification_already_rejected_snackbar">이미 거절한 직관 신청이예요.</string>
+    <string name="notification_already_accepted_snackbar">이미 수락한 직관 신청이예요.</string>
+    <string name="notification_delete_error_snackbar">해당 알림을 삭제할 수 없습니다. 잠시후 다시 시도해 주세요.</string>
+</resources>

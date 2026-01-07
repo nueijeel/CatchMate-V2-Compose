@@ -1,0 +1,89 @@
+<resources>
+    <string name="post_basic_info">기본 정보</string>
+    <string name="post_game_info">경기 정보</string>
+    <string name="post_additional_info">추가 설명</string>
+    <string name="post_preference_gender">선호 성별</string>
+    <string name="post_preference_age">선호 나이대</string>
+    <string name="post_preferences_title">선호 사항</string>
+    <string name="regardless_of_gender">성별무관</string>
+    <string name="regardless_of_age">전연령</string>
+    <string name="post_letter_count_limit">/300</string>
+    <string name="teenager">10대</string>
+    <string name="twenties">20대</string>
+    <string name="thirties">30대</string>
+    <string name="fourties">40대</string>
+    <string name="fifties">50대 이상</string>
+    <string name="temporary_storage">임시저장</string>
+    <string name="post_complete">작성 완료</string>
+    <string name="post_register">직관 신청</string>
+    <string name="post_register_closed">신청 마감</string>
+    <string name="post_check_register">보낸 신청 보기</string>
+    <string name="post_writer">채팅 보기</string>
+
+    <string name="temporary_storage_import_question">임시저장된 글을 불러올까요?</string>
+    <string name="temporary_storage_import_positive">불러오기</string>
+    <string name="temporary_storage_import_negative">새로 작성</string>
+    <string name="temporary_storage_save_question">작성 중인 글을 임시저장할까요?</string>
+    <string name="temporary_storage_save_positive">임시저장</string>
+    <string name="temporary_storage_save_negative">나가기</string>
+    <string name="temporary_storage_sucess_toast_msg">임시저장이 완료되었어요</string>
+
+    <string name="post_edt_hint_title">제목을 입력해주세요</string>
+    <string name="post_edt_hint_count">본인 포함 인원</string>
+    <string name="post_edt_hint_count_unit">명</string>
+    <string name="post_edt_hint_game_date_time">경기 날짜 및 시간을 입력해주세요</string>
+    <string name="post_edt_hint_home">홈 구단</string>
+    <string name="post_edt_hint_away">원정 구단</string>
+    <string name="post_edt_hint_cheer_team">응원 구단 선택</string>
+    <string name="post_edt_hint_place">구장 위치</string>
+    <string name="post_edt_hint_additional_info">내용을 입력해주세요</string>
+    <string name="post_edt_number_picker_invalid_value_toast">현재 참여한 인원보다 적은 인원은 선택할 수 없어요</string>
+
+    <string name="post_game_time_title">경기 시간</string>
+    <string name="post_game_time_2pm">14:00</string>
+    <string name="post_game_time_5pm">17:00</string>
+    <string name="post_game_time_6pm">18:00</string>
+    <string name="post_game_time_6pm_30">18:30</string>
+
+    <string name="post_place_nc">창원</string>
+    <string name="post_place_ssg">인천</string>
+    <string name="post_place_doosan_lg">잠실</string>
+    <string name="post_place_kt">수원</string>
+    <string name="post_place_kia">광주</string>
+    <string name="post_place_kiwoom">고척</string>
+    <string name="post_place_lotte_first">사직</string>
+    <string name="post_place_lotte_second">울산</string>
+    <string name="post_place_hanwha_first">대전</string>
+    <string name="post_place_hanwha_second">청주</string>
+    <string name="post_place_samsung_first">대구</string>
+    <string name="post_place_samsung_second">포항</string>
+
+    <string name="application_detail_dialog_hint">간단한 자기소개를 적어주세요</string>
+    <string name="application_detail_dialog_write_title">직관 신청을 보낼까요?</string>
+    <string name="application_detail_dialog_read_title">직관 신청을 보냈어요</string>
+    <string name="dialog_button_enroll_cancel">신청 취소</string>
+    <string name="dialog_button_cancel">취소</string>
+    <string name="dialog_button_enroll">신청</string>
+    <string name="dialog_button_delete">삭제</string>
+
+    <string name="post_read_date">일시</string>
+    <string name="post_read_place">구장</string>
+    <string name="post_read_people_count">인원</string>
+    <string name="post_read_additional_info">추가 정보</string>
+    <string name="post_read_toast_msg">게시글을 저장했어요</string>
+    <string name="post_already_liked_toast_msg">이미 찜한 게시글입니다</string>
+
+    <string name="post_read_writer_menu_up">끌어올리기</string>
+    <string name="post_read_writer_menu_up_complete">게시글을 끌어올렸어요</string>
+    <string name="post_read_writer_menu_up_failure">%s 뒤에 끌어올릴 수 있어요</string>
+    <string name="post_read_writer_menu_update">게시글 수정</string>
+    <string name="post_read_writer_menu_delete">게시글 삭제</string>
+    <string name="post_read_writer_menu_delete_dialog_title">게시글 삭제 시 채팅방도 삭제돼요\n정말로 삭제할까요?</string>
+    <string name="post_read_user_menu_liked">찜하기</string>
+    <string name="post_read_user_menu_share">공유하기</string>
+    <string name="post_read_user_menu_report">신고하기</string>
+
+    <string name="post_enroll_success">직관 신청이 완료되었어요</string>
+
+    <string name="post_finished_game_alert_title">이미 시작된 게임이에요\n그래도 신청할까요?</string>
+</resources>

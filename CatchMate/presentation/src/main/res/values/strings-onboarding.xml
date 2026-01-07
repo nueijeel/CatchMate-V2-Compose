@@ -1,0 +1,44 @@
+<resources>
+    <string name="tac_title_1">딱 맞는 직관 친구 찾기를 위한</string>
+    <string name="tac_title_2">동의가 필요해요</string>
+    <string name="tac_all_check_title">모두 동의하기</string>
+    <string name="tac_terms_title">캐치메이트 이용약관</string>
+    <string name="tac_content_1">[필수] 캐치메이트 이용약관 동의</string>
+    <string name="tac_content_2">[필수] 개인정보 수집 이용 동의</string>
+    <string name="tac_content_3">[선택] 푸시알림 수신 동의</string>
+
+    <string name="signup_title_1">딱 맞는 직관 친구 찾기를 위해</string>
+    <string name="signup_title_2">정보를 입력해주세요</string>
+    <string name="signup_nickname">닉네임</string>
+    <string name="signup_nickname_hint">닉네임을 입력해주세요</string>
+    <string name="signup_nickname_count_limit">/10</string>
+    <string name="signup_nickname_unusable">이미 사용 중인 닉네임입니다</string>
+    <string name="signup_nickname_usable">사용 가능한 닉네임입니다</string>
+    <string name="signup_birth">생년월일</string>
+    <string name="signup_birth_hint">생년월일을 입력해주세요 예)000000</string>
+    <string name="signup_gender">성별</string>
+
+    <string name="team_onboarding_title1">%s 님의</string>
+    <string name="team_onboarding_title2">응원구단을 알려주세요</string>
+    <string name="pacifist">평화주의자</string>
+    <string name="baseball_beginner">야알못</string>
+
+    <string name="cheer_style_onboarding_title2">응원 스타일을 알려주세요</string>
+    <string name="cheer_style_director">감독 스타일</string>
+    <string name="cheer_style_director_explain">여기선 이렇게 하고 저기선\n저렇게 했어야지</string>
+    <string name="cheer_style_mother_bird">어미새 스타일</string>
+    <string name="cheer_style_mother_bird_explain">못해도 너는 내 새끼\n무조건적 애정과 박수</string>
+    <string name="cheer_style_glutton">먹보 스타일</string>
+    <string name="cheer_style_glutton_explain">그래서 여기 구장 맛집이\n어디라구요?</string>
+    <string name="cheer_style_cheer_leader">응원단장 스타일</string>
+    <string name="cheer_style_cheer_leader_explain">내가 바로 응원단장이고\n내가 치어리더다</string>
+    <string name="cheer_style_stone">돌하르방 스타일</string>
+    <string name="cheer_style_stone_explain">...</string>
+    <string name="cheer_style_bodhisattva">보살 스타일</string>
+    <string name="cheer_style_bodhisattva_explain">그래 그럴 수 있지\n그래도 잘했다</string>
+    <string name="selectable_mark">선택</string>
+
+
+    <string name="signup_complete_title">회원가입 완료</string>
+    <string name="signup_complete_sub_title">함께할수록 더욱 재밌는 야구 직관\n캐치메이트에서 직관 친구를 구해보세요!</string>
+</resources>

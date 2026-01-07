@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey50"
+    tools:context=".view.support.ServiceCenterAnswerFragment">
+
+    <include
+        android:id="@+id/layout_header_service_center_answer"
+        layout="@layout/layout_header_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_header_service_center_answer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_title_service_center_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey0"
+                android:orientation="vertical"
+                android:paddingLeft="18dp"
+                android:paddingTop="12dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_title_service_center_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Typography.HeadLine03.Medium"
+                    tools:text="@string/service_center_answer_title" />
+
+                <TextView
+                    android:id="@+id/tv_date_service_center_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    android:textColor="@color/grey500"
+                    tools:text="2024년 7월 3일" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_inquiry_service_center_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/grey0"
+                android:orientation="vertical"
+                android:paddingLeft="18dp"
+                android:paddingTop="16dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_inquiry_title_service_center_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_center_answer_inquiry_title"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    android:textColor="@color/grey500" />
+
+                <TextView
+                    android:id="@+id/tv_inquiry_content_service_center_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    tools:text="어쩌구" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/grey0"
+                android:orientation="vertical"
+                android:paddingLeft="18dp"
+                android:paddingTop="16dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_answer_title_service_center_asnwer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_center_answer_answer_title"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    android:textColor="@color/grey500" />
+
+                <TextView
+                    android:id="@+id/tv_answer_content_service_center_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    tools:text="어쩌구" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

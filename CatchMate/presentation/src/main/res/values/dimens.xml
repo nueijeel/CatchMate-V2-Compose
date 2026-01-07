@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- layout grid -->
+    <dimen name="main_grid_margin">18dp</dimen>
+    <dimen name="sub_grid_margin">24dp</dimen>
+    <dimen name="tab_bar_grid_margin">12dp</dimen>
+    <dimen name="gutter">9dp</dimen>
+
+    <!-- spacing -->
+    <dimen name="xstiny">4dp</dimen>
+    <dimen name="xtiny">6dp</dimen>
+    <dimen name="tiny">8dp</dimen>
+    <dimen name="xsmall">12dp</dimen>
+    <dimen name="small">16dp</dimen>
+    <dimen name="smedium">20dp</dimen>
+    <dimen name="base">24dp</dimen>
+    <dimen name="medium">32dp</dimen>
+    <dimen name="mlarge">40dp</dimen>
+    <dimen name="large">48dp</dimen>
+    <dimen name="xlarge">56dp</dimen>
+
+    <!-- common view size -->
+    <dimen name="layout_width">52dp</dimen>
+    <dimen name="layout_height">52dp</dimen>
+</resources>

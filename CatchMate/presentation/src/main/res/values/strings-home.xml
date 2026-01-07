@@ -1,0 +1,12 @@
+<resources>
+    <string name="home_menu_home">홈</string>
+    <string name="home_menu_chatting">채팅</string>
+    <string name="home_menu_favorite">찜</string>
+    <string name="home_menu_notice">알림</string>
+    <string name="home_menu_mypage">마이</string>
+    <string name="filter_state_save">저장</string>
+    <string name="home_filter_team">응원 구단</string>
+    <string name="home_filter_date">경기 날짜</string>
+    <string name="home_filter_member_count">모집 인원</string>
+    <string name="home_no_list_message">해당하는 게시글이 없어요</string>
+</resources>

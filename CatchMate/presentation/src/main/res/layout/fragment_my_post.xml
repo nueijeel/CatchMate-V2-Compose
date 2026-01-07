@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey50"
+    tools:context=".view.mypage.MyPostFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_my_post_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="18dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_my_post_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="18dp" />
+
+    <include
+        android:id="@+id/layout_header_my_post"
+        layout="@layout/layout_header_kebab_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <view
+        android:id="@+id/view_my_post_profile"
+        class="com.catchmate.presentation.view.mypage.MyPageUserProfileView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_header_my_post" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_my_post"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_my_post_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_my_post_left"
+        app:layout_constraintTop_toBottomOf="@+id/view_my_post_profile"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_home_post" />
+
+    <LinearLayout
+        android:id="@+id/layout_my_post_no_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_my_post_profile">
+
+        <ImageView
+            android:id="@+id/iv_my_post_no_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_no_list_icon" />
+
+        <TextView
+            android:id="@+id/tv_my_post_no_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/mypost_no_list_msg"
+            android:textAppearance="@style/Typography.HeadLine03.SemiBold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_my_post_blocked_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey0"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingTop="4dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="4dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_my_post_profile">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_blocked_user_my_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_all_rect_r8_grey50"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:stateListAnimator="@null"
+            android:text="@string/mypage_mypost_user_block_message"
+            android:textAppearance="@style/Typography.Body01.SemiBold"
+            android:textColor="@color/grey400" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

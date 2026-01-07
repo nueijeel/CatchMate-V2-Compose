@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey50"
+    tools:context=".view.favorite.FavoriteFragment">
+
+    <include
+        android:id="@+id/layout_header_favorite"
+        layout="@layout/layout_header_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/main_grid_margin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="@dimen/main_grid_margin" />
+
+    <LinearLayout
+        android:id="@+id/layout_favorite_no_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header_favorite">
+
+        <ImageView
+            android:id="@+id/iv_favorite_no_list"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_marginBottom="@dimen/large"
+            android:src="@drawable/img_no_list_icon" />
+
+        <TextView
+            android:id="@+id/tv_favorite_no_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smedium"
+            android:text="@string/favorite_no_list_title"
+            android:textAppearance="@style/Typography.HeadLine03.SemiBold" />
+
+        <TextView
+            android:id="@+id/tv_favorite_no_list_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/favorite_no_list_explain"
+            android:textAppearance="@style/Typography.Body02.Medium"
+            android:textColor="@color/grey500" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_favorite_post"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_favorite"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header_favorite"
+        tools:listitem="@layout/item_home_post" />
+</androidx.constraintlayout.widget.ConstraintLayout>

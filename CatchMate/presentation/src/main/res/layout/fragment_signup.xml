@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey0"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".view.onboarding.SignupFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_signup_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/sub_grid_margin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_signup_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="@dimen/sub_grid_margin" />
+
+    <include
+        android:id="@+id/layout_signup_header"
+        layout="@layout/layout_header_onboarding"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_signup_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large"
+        android:text="@string/signup_title_1"
+        android:textAppearance="@style/Typography.HeadLine01.Regular"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_signup_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_signup_left"
+        app:layout_constraintTop_toBottomOf="@+id/layout_signup_header" />
+
+    <TextView
+        android:id="@+id/tv_signup_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xstiny"
+        android:text="@string/signup_title_2"
+        android:textAppearance="@style/Typography.HeadLine01.Regular"
+        app:layout_constraintStart_toStartOf="@+id/guideline_signup_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_signup_title" />
+
+    <ImageView
+        android:id="@+id/iv_signup_essential_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/vec_all_essential_mark_6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_signup_title2"
+        app:layout_constraintStart_toEndOf="@+id/tv_signup_title2"
+        app:layout_constraintTop_toTopOf="@+id/tv_signup_title2" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_signup_footer"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_signup_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_signup_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_signup_title2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_signup_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/signup_nickname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_signup_nickname_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Typography.Body02.Medium"
+                android:textColor="@color/grey500"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_signup_nickname_count_limit"
+                app:layout_constraintEnd_toStartOf="@+id/tv_signup_nickname_count_limit"
+                app:layout_constraintTop_toTopOf="@+id/tv_signup_nickname_count_limit"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/tv_signup_nickname_count_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup_nickname_count_limit"
+                android:textAppearance="@style/Typography.Body02.Medium"
+                android:textColor="@color/grey500"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_signup_nickname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_signup_nickname" />
+
+            <EditText
+                android:id="@+id/edt_signup_nickname"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="@dimen/xsmall"
+                android:background="@drawable/selector_all_edt_bg"
+                android:hint="@string/signup_nickname_hint"
+                android:imeOptions="actionDone"
+                android:inputType="text|textPersonName"
+                android:maxLength="10"
+                android:paddingStart="@dimen/small"
+                android:paddingEnd="@dimen/small"
+                android:singleLine="true"
+                android:textAppearance="@style/Typography.Body02.SemiBold"
+                android:textColor="@color/grey800"
+                android:textColorHint="@color/grey400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_signup_nickname" />
+
+            <TextView
+                android:id="@+id/tv_signup_nickname_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xstiny"
+                android:text="@string/signup_nickname_unusable"
+                android:textAppearance="@style/Typography.Caption01.SemiBold"
+                android:textColor="@color/system_red"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_signup_nickname" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_signup_delete_input"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:padding="8dp"
+                android:src="@drawable/vec_all_close_20dp"
+                android:tint="@color/grey500"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/edt_signup_nickname"
+                app:layout_constraintEnd_toEndOf="@+id/edt_signup_nickname"
+                app:layout_constraintTop_toTopOf="@+id/edt_signup_nickname" />
+
+            <TextView
+                android:id="@+id/tv_signup_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium"
+                android:text="@string/signup_birth"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_signup_nickname" />
+
+            <EditText
+                android:id="@+id/edt_signup_birth"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="@dimen/xsmall"
+                android:background="@drawable/selector_all_edt_bg"
+                android:hint="@string/signup_birth_hint"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingStart="@dimen/small"
+                android:paddingRight="@dimen/small"
+                android:singleLine="true"
+                android:textAppearance="@style/Typography.Body02.SemiBold"
+                android:textColor="@color/grey800"
+                android:textColorHint="@color/grey400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_signup_birth" />
+
+            <TextView
+                android:id="@+id/tv_signup_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium"
+                android:text="@string/signup_gender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_signup_birth" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipgroup_signup_gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xsmall"
+                android:orientation="horizontal"
+                app:checkedChip="@id/chip_signup_female"
+                app:chipSpacingHorizontal="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_signup_gender"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_signup_female"
+                    style="@style/CustomGenderChip"
+                    android:gravity="center"
+                    android:text="@string/female"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Typography.Body02.SemiBold" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_signup_male"
+                    style="@style/CustomGenderChip"
+                    android:text="@string/male"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Typography.Body02.SemiBold" />
+
+            </com.google.android.material.chip.ChipGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/layout_signup_footer"
+        layout="@layout/layout_footer_one_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

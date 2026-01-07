@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TeamButtonView">
+        <attr name="teamNameText" format="string"/>
+        <attr name="teamToggleBg" format="reference"/>
+        <attr name="teamLogoImage" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CheerStyleButtonView">
+        <attr name="cheerStyleToggleBg" format="reference"/>
+        <attr name="cheerStyleNameText" format="string"/>
+        <attr name="cheerStyleExplainText" format="string"/>
+        <attr name="cheerStyleImage" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="HomeFilterView">
+        <attr name="homeFilterLayoutColor" format="color"/>
+        <attr name="homeFilterNameText" format="string"/>
+        <attr name="homeFilterImage" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ChattingDateView">
+        <attr name="chattingDateText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ChattingGameInfoView">
+        <attr name="chattingGameInfoDateText" format="string"/>
+        <attr name="chattingGameInfoTimeText" format="string"/>
+        <attr name="chattingGameInfoPlaceText" format="string"/>
+        <attr name="chattingGameInfoHomeTeamImage" format="reference"/>
+        <attr name="chattingGameInfoAwayTeamImage" format="reference"/>
+        <attr name="chattingGameInfoHomeTeamLogo" format="reference"/>
+        <attr name="chattingGameInfoAwayTeamLogo" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ChattingParticipantAlertView">
+        <attr name="chattingParticipantAlertText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyPageUserProfileView">
+        <attr name="myPageUserProfileImage" format="reference"/>
+        <attr name="myPageUserProfileNicknameText" format="string"/>
+        <attr name="myPageUserProfileTeamBadgeColor" format="color"/>
+        <attr name="myPageUserProfileTeamBadgeText" format="string"/>
+        <attr name="myPageUserProfileCheerStyleBadgeText" format="string"/>
+        <attr name="myPageUserProfileGenderBadgeText" format="string"/>
+        <attr name="myPageUserProfileAgeBadgeText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="TeamToggleCheckButtonView">
+        <attr name="teamToggleCheckButtonToggleBg" format="reference"/>
+        <attr name="teamToggleCheckButtonLogoImage" format="reference"/>
+        <attr name="teamToggleCheckButtonTeamNameText" format="string"/>
+    </declare-styleable>
+</resources>

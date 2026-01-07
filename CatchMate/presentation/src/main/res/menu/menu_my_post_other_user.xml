@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuItem_my_post_block"
+        android:title="@string/mypage_mypost_menu_block" />
+    <item
+        android:id="@+id/menuItem_my_post_report"
+        android:title="@string/mypage_mypost_menu_report" />
+</menu>

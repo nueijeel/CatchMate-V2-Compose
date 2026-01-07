@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey50"
+    tools:context=".view.post.ReadPostFragment">
+
+    <include
+        android:id="@+id/layout_read_post_header"
+        layout="@layout/layout_header_kebab_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_read_post_header"
+        app:layout_constraintBottom_toTopOf="@+id/layout_read_post_footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey0"
+                android:paddingLeft="@dimen/main_grid_margin"
+                android:paddingRight="@dimen/main_grid_margin">
+
+                <TextView
+                    android:id="@+id/tv_read_post_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xsmall"
+                    android:textAppearance="@style/Typography.HeadLine03.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="연패는 안 된다 쉬었잖아 제발" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xtiny"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_read_post_title">
+
+                    <TextView
+                        android:id="@+id/tv_read_post_regardless_of_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/xstiny"
+                        android:background="@drawable/shape_all_rect_r20"
+                        android:backgroundTint="@color/grey100"
+                        android:paddingLeft="@dimen/tiny"
+                        android:paddingTop="2dp"
+                        android:paddingRight="@dimen/tiny"
+                        android:paddingBottom="2dp"
+                        android:text="@string/regardless_of_age"
+                        android:textAppearance="@style/Typography.Caption01.Regular"
+                        android:textColor="@color/grey500"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_read_post_teenager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/xstiny"
+                        android:background="@drawable/shape_all_rect_r20"
+                        android:backgroundTint="@color/grey100"
+                        android:paddingLeft="@dimen/tiny"
+                        android:paddingTop="2dp"
+                        android:paddingRight="@dimen/tiny"
+                        android:paddingBottom="2dp"
+                        android:text="@string/teenager"
+                        android:textAppearance="@style/Typography.Caption01.Regular"
+                        android:textColor="@color/grey500"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_read_post_twenties"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/xstiny"
+                        android:background="@drawable/shape_all_rect_r20"
+                        android:backgroundTint="@color/grey100"
+                        android:paddingLeft="@dimen/tiny"
+                        android:paddingTop="2dp"
+                        android:paddingRight="@dimen/tiny"
+                        android:paddingBottom="2dp"
+                        android:text="@string/twenties"
+                        android:textAppearance="@style/Typography.Caption01.Regular"
+                        android:textColor="@color/grey500"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_read_post_thirties"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/xstiny"
+                        android:background="@drawable/shape_all_rect_r20"
+                        android:backgroundTint="@color/grey100"
+                        android:paddingLeft="@dimen/tiny"
+                        android:paddingTop="2dp"
+                        android:paddingRight="@dimen/tiny"
+                        android:paddingBottom="2dp"
+                        android:text="@string/thirties"
+                        android:textAppearance="@style/Typography.Caption01.Regular"
+                        android:textColor="@color/grey500"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_read_post_fourties"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/xstiny"
+                        android:background="@drawable/shape_all_rect_r20"
+                        android:backgroundTint="@color/grey100"
+                        android:paddingLeft="@dimen/tiny"
+                        android:paddingTop="2dp"
+                        android:paddingRight="@dimen/tiny"
+                        android:paddingBottom="2dp"
+                        android:text="@string/fourties"
+                        android:textAppearance="@style/Typography.Caption01.Regular"
+                        android:textColor="@color/grey500"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_read_post_fifties"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/xstiny"
+                        android:background="@drawable/shape_all_rect_r20"
+                        android:backgroundTint="@color/grey100"
+                        android:paddingLeft="@dimen/tiny"
+                        android:paddingTop="2dp"
+                        android:paddingRight="@dimen/tiny"
+                        android:paddingBottom="2dp"
+                        android:text="@string/fifties"
+                        android:textAppearance="@style/Typography.Caption01.Regular"
+                        android:textColor="@color/grey500"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_read_post_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/xstiny"
+                        android:background="@drawable/shape_all_rect_r20"
+                        android:backgroundTint="@color/grey100"
+                        android:paddingLeft="@dimen/tiny"
+                        android:paddingTop="2dp"
+                        android:paddingRight="@dimen/tiny"
+                        android:paddingBottom="2dp"
+                        android:text="@string/regardless_of_gender"
+                        android:textAppearance="@style/Typography.Caption01.Regular"
+                        android:textColor="@color/grey500" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_read_post_date_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xsmall"
+                    android:text="@string/post_read_date"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    android:textColor="@color/grey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/smedium"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    app:layout_constraintStart_toEndOf="@+id/tv_read_post_date_title"
+                    app:layout_constraintTop_toTopOf="@+id/tv_read_post_date_title"
+                    tools:text="7월 3일 수요일 | 18:30" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_place_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tiny"
+                    android:text="@string/post_read_place"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    android:textColor="@color/grey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_read_post_date_title" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/smedium"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    app:layout_constraintStart_toEndOf="@+id/tv_read_post_place_title"
+                    app:layout_constraintTop_toTopOf="@+id/tv_read_post_place_title"
+                    tools:text="잠실" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_people_count_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tiny"
+                    android:text="@string/post_read_people_count"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    android:textColor="@color/grey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_read_post_place_title" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_people_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/smedium"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    app:layout_constraintStart_toEndOf="@+id/tv_read_post_people_count_title"
+                    app:layout_constraintTop_toTopOf="@+id/tv_read_post_people_count_title"
+                    tools:text="4명" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/shape_all_rect_r8"
+                    android:backgroundTint="@color/grey50"
+                    android:paddingTop="@dimen/small"
+                    android:paddingBottom="@dimen/small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_read_post_people_count_title">
+
+                    <ImageView
+                        android:id="@+id/iv_read_post_home_team_bg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="@dimen/base"
+                        android:background="@drawable/shape_all_rect_r6"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_read_post_versus"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_read_post_versus"
+                        app:layout_constraintTop_toTopOf="@+id/tv_read_post_versus" />
+
+                    <ImageView
+                        android:id="@+id/iv_read_post_home_team_logo"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_read_post_home_team_bg"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_read_post_home_team_bg"
+                        app:layout_constraintStart_toStartOf="@+id/iv_read_post_home_team_bg"
+                        app:layout_constraintTop_toTopOf="@+id/iv_read_post_home_team_bg" />
+
+                    <TextView
+                        android:id="@+id/tv_read_post_versus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/versus"
+                        android:textAppearance="@style/Typography.Body03.Medium"
+                        android:textColor="@color/grey500"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_read_post_away_team_bg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="@dimen/base"
+                        android:background="@drawable/shape_all_rect_r6"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_read_post_versus"
+                        app:layout_constraintStart_toEndOf="@+id/tv_read_post_versus"
+                        app:layout_constraintTop_toTopOf="@+id/tv_read_post_versus" />
+
+                    <ImageView
+                        android:id="@+id/iv_read_post_away_team_logo"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_read_post_away_team_bg"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_read_post_away_team_bg"
+                        app:layout_constraintStart_toStartOf="@+id/iv_read_post_away_team_bg"
+                        app:layout_constraintTop_toTopOf="@+id/iv_read_post_away_team_bg" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_read_post_writer_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tiny"
+                android:background="@color/grey0"
+                android:paddingLeft="@dimen/main_grid_margin"
+                android:paddingTop="@dimen/small"
+                android:paddingRight="@dimen/main_grid_margin"
+                android:paddingBottom="@dimen/small">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_read_post_writer_profile"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/vec_all_default_profile" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_writer_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/tiny"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    app:layout_constraintStart_toEndOf="@+id/iv_read_post_writer_profile"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="닉네임은열글자까지만" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_writer_team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xtiny"
+                    android:background="@drawable/shape_all_rect_r2"
+                    android:paddingLeft="@dimen/xstiny"
+                    android:paddingTop="1dp"
+                    android:paddingRight="@dimen/xstiny"
+                    android:paddingBottom="1dp"
+                    android:textAppearance="@style/Typography.Caption01.Medium"
+                    android:textColor="@color/grey50"
+                    app:layout_constraintStart_toStartOf="@+id/tv_read_post_writer_nickname"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_read_post_writer_nickname"
+                    tools:text="@string/team_hanwha_eagles" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_writer_cheer_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/xstiny"
+                    android:background="@drawable/shape_all_rect_r2"
+                    android:backgroundTint="@color/brand500"
+                    android:paddingLeft="@dimen/xstiny"
+                    android:paddingTop="1dp"
+                    android:paddingRight="@dimen/xstiny"
+                    android:paddingBottom="1dp"
+                    android:textAppearance="@style/Typography.Caption01.Medium"
+                    android:textColor="@color/grey50"
+                    app:layout_constraintStart_toEndOf="@+id/tv_read_post_writer_team"
+                    app:layout_constraintTop_toTopOf="@+id/tv_read_post_writer_team"
+                    tools:text="@string/badge_cheer_leader" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_writer_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/xstiny"
+                    android:background="@drawable/shape_all_rect_r2"
+                    android:backgroundTint="@color/grey100"
+                    android:paddingLeft="@dimen/xstiny"
+                    android:paddingTop="1dp"
+                    android:paddingRight="@dimen/xstiny"
+                    android:paddingBottom="1dp"
+                    android:textAppearance="@style/Typography.Caption01.Medium"
+                    android:textColor="@color/grey500"
+                    app:layout_constraintStart_toEndOf="@+id/tv_read_post_writer_cheer_style"
+                    app:layout_constraintTop_toTopOf="@+id/tv_read_post_writer_cheer_style"
+                    tools:text="@string/female" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_writer_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/xstiny"
+                    android:background="@drawable/shape_all_rect_r2"
+                    android:backgroundTint="@color/grey100"
+                    android:paddingLeft="@dimen/xstiny"
+                    android:paddingTop="1dp"
+                    android:paddingRight="@dimen/xstiny"
+                    android:paddingBottom="1dp"
+                    android:textAppearance="@style/Typography.Caption01.Medium"
+                    android:textColor="@color/grey500"
+                    app:layout_constraintStart_toEndOf="@+id/tv_read_post_writer_gender"
+                    app:layout_constraintTop_toTopOf="@+id/tv_read_post_writer_gender"
+                    tools:text="@string/twenties" />
+
+                <ImageButton
+                    android:id="@+id/imgbtn_read_post_writer_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/vec_all_right_arrow_20dp"
+                    android:tint="@color/grey500"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tiny"
+                android:background="@color/grey0"
+                android:paddingLeft="@dimen/main_grid_margin"
+                android:paddingTop="@dimen/small"
+                android:paddingRight="@dimen/main_grid_margin"
+                android:paddingBottom="22dp">
+
+                <TextView
+                    android:id="@+id/tv_read_post_additional_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/post_read_additional_info"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    android:textColor="@color/grey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_read_post_additional_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xsmall"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_read_post_additional_info_title"
+                    tools:text="~~~~~~" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/layout_read_post_footer"
+        layout="@layout/layout_footer_liked"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

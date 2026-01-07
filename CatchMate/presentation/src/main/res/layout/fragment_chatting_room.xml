@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey50"
+    tools:context=".view.chatting.ChattingRoomFragment">
+
+    <include
+        android:id="@+id/layout_header_chatting_room"
+        layout="@layout/layout_header_hamburger_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_chatting_room_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/main_grid_margin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_chatting_room_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="@dimen/main_grid_margin" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header_chatting_room"
+        app:layout_constraintBottom_toTopOf="@+id/layout_footer_chatting_room_chat_box"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_chatting_room_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_chatting_room_left">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.catchmate.presentation.view.chatting.ChattingGameInfoView
+                android:id="@+id/cgiv_chatting_room"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:chattingGameInfoAwayTeamImage="@drawable/shape_chatting_team_rect_r6"
+                app:chattingGameInfoHomeTeamImage="@drawable/shape_chatting_team_rect_r6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_chatting_room_chat_list"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/tiny"
+                android:layout_marginBottom="@dimen/tiny"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cgiv_chatting_room"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_received_chat" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_footer_chatting_room_chat_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey0"
+        android:paddingLeft="@dimen/xsmall"
+        android:paddingTop="@dimen/xstiny"
+        android:paddingRight="@dimen/xsmall"
+        android:paddingBottom="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/edt_chatting_room_chat_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_chatting_edt_bg"
+            android:ems="10"
+            android:gravity="start|center_vertical"
+            android:hint="@string/chatting_room_chat_box_hint"
+            android:inputType="text|textMultiLine"
+            android:maxLines="5"
+            android:minHeight="44dp"
+            android:overScrollMode="ifContentScrolls"
+            android:paddingLeft="20dp"
+            android:paddingRight="64dp"
+            android:scrollbars="vertical"
+            android:textAppearance="@style/Typography.Body02.Medium"
+            android:textColor="@color/grey800"
+            android:textColorHint="@color/grey500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_chatting_room_chat_box_send"
+            style="@style/ThemeOverlay.Material3.Button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="@dimen/xtiny"
+            android:background="@drawable/selector_chatting_send_btn"
+            android:clickable="true"
+            android:enabled="false"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_chatting_room_chat_box"
+            app:layout_constraintEnd_toEndOf="@+id/edt_chatting_room_chat_box"
+            app:layout_constraintTop_toTopOf="@+id/edt_chatting_room_chat_box" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

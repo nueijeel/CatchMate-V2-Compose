@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey0"
+    android:paddingStart="@dimen/main_grid_margin"
+    android:paddingTop="@dimen/small"
+    android:paddingEnd="@dimen/main_grid_margin"
+    android:paddingBottom="@dimen/small">
+
+    <ImageView
+        android:id="@+id/iv_chatting_item_bg"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shape_all_rect_r8" />
+
+    <ImageView
+        android:id="@+id/iv_chatting_item_logo"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_chatting_item_bg"
+        app:layout_constraintEnd_toEndOf="@+id/iv_chatting_item_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_chatting_item_bg"
+        app:layout_constraintTop_toTopOf="@+id/iv_chatting_item_bg" />
+
+    <TextView
+        android:id="@+id/tv_chatting_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/xsmall"
+        android:ellipsize="end"
+        android:maxWidth="220dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textAppearance="@style/Typography.Body01.Medium"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/iv_chatting_item_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="카리나 시구 보러 같이 가실 분" />
+
+    <TextView
+        android:id="@+id/tv_chatting_item_people_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textAppearance="@style/Typography.Caption01.Medium"
+        android:textColor="@color/grey500"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_chatting_item_title"
+        app:layout_constraintStart_toEndOf="@+id/tv_chatting_item_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_chatting_item_title"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/tv_chatting_item_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="N"
+        android:textAppearance="@style/Typography.Caption01.SemiBold"
+        android:textColor="@color/brand500"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_chatting_item_title"
+        app:layout_constraintStart_toEndOf="@+id/tv_chatting_item_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_chatting_item_title" />
+
+    <TextView
+        android:id="@+id/tv_chatting_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/Typography.Caption01.Medium"
+        android:textColor="@color/grey500"
+        app:layout_constraintBottom_toBottomOf="@id/tv_chatting_item_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_chatting_item_title"
+        tools:text="1시간 전" />
+
+    <TextView
+        android:id="@+id/tv_chatting_item_last_chat"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:textAppearance="@style/Typography.Body02.Medium"
+        android:textColor="@color/grey600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_chatting_item_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_chatting_item_title"
+        tools:text="저 롯데 팬은 아니고 카리나만 보러 가고 싶어요" />
+
+    <TextView
+        android:id="@+id/tv_chatting_item_unread_message_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_chatting_unread_message_count"
+        android:gravity="center"
+        android:textAppearance="@style/Typography.Body03.Medium"
+        android:textColor="@color/grey0"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_chatting_item_last_chat"
+        app:layout_constraintEnd_toEndOf="@+id/tv_chatting_item_time"
+        app:layout_constraintTop_toTopOf="@+id/tv_chatting_item_last_chat"
+        tools:text="2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

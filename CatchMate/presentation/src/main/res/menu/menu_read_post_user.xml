@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuitem_post_liked"
+        android:title="@string/post_read_user_menu_liked" />
+    <item
+        android:id="@+id/menuitem_post_share"
+        android:title="@string/post_read_user_menu_share" />
+    <item
+        android:id="@+id/menuitem_post_report"
+        android:title="@string/post_read_user_menu_report" />
+</menu>

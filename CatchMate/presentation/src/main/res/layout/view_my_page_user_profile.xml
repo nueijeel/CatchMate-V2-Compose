@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey0"
+    android:paddingLeft="@dimen/main_grid_margin"
+    android:paddingTop="@dimen/small"
+    android:paddingRight="@dimen/main_grid_margin"
+    android:paddingBottom="@dimen/small">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_my_page_user_profile"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/vec_all_default_profile" />
+
+    <TextView
+        android:id="@+id/tv_my_page_user_profile_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/xsmall"
+        android:textAppearance="@style/Typography.Body01.SemiBold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/iv_my_page_user_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="사건은다가와아오에" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/xsmall"
+        android:layout_marginTop="@dimen/xtiny"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/iv_my_page_user_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_my_page_user_profile_nickname">
+
+        <TextView
+            android:id="@+id/tv_my_page_user_profile_team_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/xstiny"
+            android:layout_weight="1"
+            android:background="@drawable/shape_all_rect_r2"
+            android:gravity="center"
+            android:paddingLeft="@dimen/xstiny"
+            android:paddingTop="1dp"
+            android:paddingRight="@dimen/xstiny"
+            android:paddingBottom="1dp"
+            android:textAppearance="@style/Typography.Caption01.Medium"
+            android:textColor="@color/grey50"
+            tools:text="이글스" />
+
+        <TextView
+            android:id="@+id/tv_my_page_user_profile_cheer_style_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/xstiny"
+            android:layout_weight="1"
+            android:background="@drawable/shape_all_rect_r2"
+            android:backgroundTint="@color/brand500"
+            android:gravity="center"
+            android:paddingLeft="@dimen/xstiny"
+            android:paddingTop="1dp"
+            android:paddingRight="@dimen/xstiny"
+            android:paddingBottom="1dp"
+            android:textAppearance="@style/Typography.Caption01.Medium"
+            android:textColor="@color/grey50"
+            tools:text="응원단장" />
+
+        <TextView
+            android:id="@+id/tv_my_page_user_profile_gender_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/xstiny"
+            android:layout_weight="1"
+            android:background="@drawable/shape_all_rect_r2"
+            android:backgroundTint="@color/grey100"
+            android:paddingLeft="@dimen/xstiny"
+            android:paddingTop="1dp"
+            android:paddingRight="@dimen/xstiny"
+            android:paddingBottom="1dp"
+            android:textAppearance="@style/Typography.Caption01.Medium"
+            android:textColor="@color/grey500"
+            tools:text="여성" />
+
+        <TextView
+            android:id="@+id/tv_my_page_user_profile_age_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_all_rect_r2"
+            android:backgroundTint="@color/grey100"
+            android:paddingLeft="@dimen/xstiny"
+            android:paddingTop="1dp"
+            android:paddingRight="@dimen/xstiny"
+            android:paddingBottom="1dp"
+            android:text="20대"
+            android:textAppearance="@style/Typography.Caption01.Medium"
+            android:textColor="@color/grey500" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imgbtn_my_page_user_profile_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:tint="@color/grey500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vec_all_right_arrow_20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

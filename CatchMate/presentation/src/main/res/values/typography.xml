@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Typography">
+        <item name="android:textColor">@color/grey800</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Typography.HeadLine01" parent="Typography">
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">36dp</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="Typography.HeadLine01.SemiBold" parent="Typography.HeadLine01">
+        <item name="fontFamily">@font/pretendard_semibold</item>
+    </style>
+
+    <style name="Typography.HeadLine01.Medium" parent="Typography.HeadLine01">
+        <item name="fontFamily">@font/pretendard_medium</item>
+    </style>
+
+    <style name="Typography.HeadLine01.Regular" parent="Typography.HeadLine01">
+        <item name="fontFamily">@font/pretendard_regular</item>
+    </style>
+
+    <style name="Typography.HeadLine02" parent="Typography">
+        <item name="android:textSize">24sp</item>
+        <item name="lineHeight">31dp</item>
+    </style>
+
+    <style name="Typography.HeadLine02.SemiBold" parent="Typography.HeadLine02">
+        <item name="fontFamily">@font/pretendard_semibold</item>
+    </style>
+
+    <style name="Typography.HeadLine02.Medium" parent="Typography.HeadLine02">
+        <item name="fontFamily">@font/pretendard_medium</item>
+    </style>
+
+    <style name="Typography.HeadLine02.Regular" parent="Typography.HeadLine02">
+        <item name="fontFamily">@font/pretendard_regular</item>
+    </style>
+
+    <style name="Typography.HeadLine03" parent="Typography">
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">26dp</item>
+    </style>
+
+    <style name="Typography.HeadLine03.SemiBold" parent="Typography.HeadLine03">
+        <item name="fontFamily">@font/pretendard_semibold</item>
+    </style>
+
+    <style name="Typography.HeadLine03.Medium" parent="Typography.HeadLine03">
+        <item name="fontFamily">@font/pretendard_medium</item>
+    </style>
+
+    <style name="Typography.HeadLine03.Regular" parent="Typography.HeadLine03">
+        <item name="fontFamily">@font/pretendard_regular</item>
+    </style>
+
+    <style name="Typography.Body01" parent="Typography">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">21dp</item>
+    </style>
+
+    <style name="Typography.Body01.SemiBold" parent="Typography.Body01">
+        <item name="fontFamily">@font/pretendard_semibold</item>
+    </style>
+
+    <style name="Typography.Body01.Medium" parent="Typography.Body01">
+        <item name="fontFamily">@font/pretendard_medium</item>
+    </style>
+
+    <style name="Typography.Body01.Regular" parent="Typography.Body01">
+        <item name="fontFamily">@font/pretendard_regular</item>
+    </style>
+
+    <style name="Typography.Body02" parent="Typography">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">18dp</item>
+    </style>
+
+    <style name="Typography.Body02.SemiBold" parent="Typography.Body02">
+        <item name="fontFamily">@font/pretendard_semibold</item>
+    </style>
+
+    <style name="Typography.Body02.Medium" parent="Typography.Body02">
+        <item name="fontFamily">@font/pretendard_medium</item>
+    </style>
+
+    <style name="Typography.Body02.Regular" parent="Typography.Body02">
+        <item name="fontFamily">@font/pretendard_regular</item>
+    </style>
+
+    <style name="Typography.Body03" parent="Typography">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16dp</item>
+    </style>
+
+    <style name="Typography.Body03.SemiBold" parent="Typography.Body03">
+        <item name="fontFamily">@font/pretendard_semibold</item>
+    </style>
+
+    <style name="Typography.Body03.Medium" parent="Typography.Body03">
+        <item name="fontFamily">@font/pretendard_medium</item>
+    </style>
+
+    <style name="Typography.Body03.Regular" parent="Typography.Body03">
+        <item name="fontFamily">@font/pretendard_regular</item>
+    </style>
+
+    <style name="Typography.Caption01" parent="Typography">
+        <item name="android:textSize">11sp</item>
+        <item name="lineHeight">15dp</item>
+    </style>
+
+    <style name="Typography.Caption01.SemiBold" parent="Typography.Caption01">
+        <item name="fontFamily">@font/pretendard_semibold</item>
+    </style>
+    
+    <style name="Typography.Caption01.Medium" parent="Typography.Caption01">
+        <item name="fontFamily">@font/pretendard_medium</item>
+    </style>
+
+    <style name="Typography.Caption01.Regular" parent="Typography.Caption01">
+        <item name="fontFamily">@font/pretendard_regular</item>
+    </style>
+</resources>

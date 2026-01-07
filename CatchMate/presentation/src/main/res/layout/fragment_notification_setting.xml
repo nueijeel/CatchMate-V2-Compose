@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.mypage.NotificationSettingFragment" >
+
+    <include
+        android:id="@+id/layout_header_notification_setting"
+        layout="@layout/layout_header_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_notification_setting_all_alarm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey0"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header_notification_setting">
+
+        <TextView
+            android:id="@+id/tv_notification_setting_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small"
+            android:text="@string/mypage_setting_notification_setting_all"
+            android:textAppearance="@style/Typography.Body01.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_notification_setting_all"
+            style="@style/Widget.App.Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/main_grid_margin"
+            android:background="@null"
+            android:clickable="false"
+            android:thumb="@drawable/shape_notification_switch_thumb"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_notification_setting_all"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_notification_setting_all"
+            app:thumbIconSize="28dp"
+            app:thumbTint="@null"
+            app:track="@drawable/selector_notification_switch_track"
+            app:trackDecoration="@null"
+            app:trackDecorationTint="@null"
+            app:trackTint="@color/color_switch_track_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_notification_setting_chat_alarm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey0"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_notification_setting_all_alarm">
+
+        <TextView
+            android:id="@+id/tv_notification_setting_chatting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/medium"
+            android:paddingTop="@dimen/small"
+            android:paddingBottom="@dimen/small"
+            android:text="@string/mypage_setting_notification_setting_chatting"
+            android:textAppearance="@style/Typography.Body01.Medium" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_notification_setting_chatting"
+            style="@style/Widget.App.Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:background="@null"
+            android:clickable="false"
+            android:thumb="@drawable/shape_notification_switch_thumb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:thumbIconSize="28dp"
+            app:thumbTint="@null"
+            app:track="@drawable/selector_notification_switch_track"
+            app:trackDecoration="@null"
+            app:trackDecorationTint="@null"
+            app:trackTint="@color/color_switch_track_color" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_notification_setting_enroll_alarm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey0"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_notification_setting_chat_alarm">
+
+        <TextView
+            android:id="@+id/tv_notification_setting_join"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/medium"
+            android:paddingTop="@dimen/small"
+            android:paddingBottom="@dimen/small"
+            android:text="@string/mypage_setting_notification_setting_join"
+            android:textAppearance="@style/Typography.Body01.Medium" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_notification_setting_enroll"
+            style="@style/Widget.App.Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:background="@null"
+            android:clickable="false"
+            android:thumb="@drawable/shape_notification_switch_thumb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:thumbIconSize="28dp"
+            app:thumbTint="@null"
+            app:track="@drawable/selector_notification_switch_track"
+            app:trackDecoration="@null"
+            app:trackDecorationTint="@null"
+            app:trackTint="@color/color_switch_track_color" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_notification_setting_event_alarm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey0"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_notification_setting_enroll_alarm">
+
+        <TextView
+            android:id="@+id/tv_notification_setting_event"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/medium"
+            android:paddingTop="@dimen/small"
+            android:paddingBottom="@dimen/small"
+            android:text="@string/mypage_setting_notification_setting_event"
+            android:textAppearance="@style/Typography.Body01.Medium" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_notification_setting_event"
+            style="@style/Widget.App.Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:background="@null"
+            android:clickable="false"
+            android:thumb="@drawable/shape_notification_switch_thumb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:thumbIconSize="28dp"
+            app:thumbTint="@null"
+            app:track="@drawable/selector_notification_switch_track"
+            app:trackDecoration="@null"
+            app:trackDecorationTint="@null"
+            app:trackTint="@color/color_switch_track_color" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

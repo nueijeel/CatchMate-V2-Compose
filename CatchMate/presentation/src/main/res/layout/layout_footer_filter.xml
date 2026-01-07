@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey0"
+    android:paddingStart="@dimen/xsmall"
+    android:paddingTop="@dimen/xstiny"
+    android:paddingEnd="@dimen/xsmall"
+    android:paddingBottom="@dimen/xstiny">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_filter_footer_reset"
+        android:layout_width="67dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_all_rect_r8_grey50"
+        android:gravity="center"
+        android:stateListAnimator="@null"
+        android:text="@string/reset"
+        android:textAppearance="@style/Typography.Body02.SemiBold"
+        android:textColor="@color/grey500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_filter_footer_apply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gutter"
+        android:background="@drawable/shape_all_submit_button"
+        android:gravity="center"
+        android:stateListAnimator="@null"
+        android:text="@string/application"
+        android:textAppearance="@style/Typography.Body01.SemiBold"
+        android:textColor="@color/grey0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_filter_footer_reset"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

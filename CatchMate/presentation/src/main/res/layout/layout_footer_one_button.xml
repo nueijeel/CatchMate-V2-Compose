@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_footer_one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="@dimen/xstiny"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/shape_all_submit_button"
+        android:enabled="false"
+        android:gravity="center"
+        android:stateListAnimator="@null"
+        android:textAppearance="@style/Typography.Body01.SemiBold"
+        android:textColor="@color/grey0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/complete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.mypage.AccountInfoFragment" >
+
+    <include
+        android:id="@+id/layout_header_account_info"
+        layout="@layout/layout_header_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey0"
+        android:paddingLeft="@dimen/main_grid_margin"
+        android:paddingTop="@dimen/small"
+        android:paddingRight="@dimen/main_grid_margin"
+        android:paddingBottom="@dimen/small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header_account_info">
+
+        <TextView
+            android:id="@+id/tv_account_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mypage_setting_user_info_title"
+            android:textAppearance="@style/Typography.Body02.Medium"
+            android:textColor="@color/grey500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_account_info_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xsmall"
+            android:layout_marginBottom="69dp"
+            android:background="@drawable/shape_all_rect_r8_grey50"
+            android:padding="@dimen/small"
+            android:textAppearance="@style/Typography.Body02.Medium"
+            android:textColor="@color/grey500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_account_info_title"
+            tools:text="catchmate@naver.com" />
+
+        <ImageView
+            android:id="@+id/iv_account_info_login_platform"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="@dimen/small"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_account_info_email"
+            app:layout_constraintEnd_toEndOf="@+id/tv_account_info_email"
+            app:layout_constraintTop_toTopOf="@+id/tv_account_info_email" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_account_info_delete_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:padding="10dp"
+        android:text="@string/mypage_setting_user_info_delete_account"
+        android:textAppearance="@style/Typography.Body02.Medium"
+        android:textColor="@color/grey500"
+        app:layout_constraintBottom_toTopOf="@+id/layout_footer_account_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/layout_footer_account_info"
+        layout="@layout/layout_footer_one_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

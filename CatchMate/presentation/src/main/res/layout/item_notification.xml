@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_notification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey0"
+    android:paddingLeft="18dp"
+    android:paddingTop="16dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="16dp">
+
+    <view
+        android:id="@+id/iv_notification_item_profile"
+        class="de.hdodenhof.circleimageview.CircleImageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/vec_all_default_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_notification_item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="2dp"
+        android:textAppearance="@style/Typography.Body01.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/iv_notification_item_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="망글곰님의 직관 신청이 도착했어요" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/iv_notification_item_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_notification_item_title">
+
+        <TextView
+            android:id="@+id/tv_notification_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/Typography.Body02.SemiBold"
+            android:textColor="@color/grey500"
+            tools:text="06.09 | " />
+
+        <TextView
+            android:id="@+id/tv_notification_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/Typography.Body02.SemiBold"
+            android:textColor="@color/grey500"
+            tools:text="17:00 | " />
+
+        <TextView
+            android:id="@+id/tv_notification_item_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/Typography.Body02.SemiBold"
+            android:textColor="@color/grey500"
+            tools:text="잠실" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

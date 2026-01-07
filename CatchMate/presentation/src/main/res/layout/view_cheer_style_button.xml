@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ToggleButton
+        android:id="@+id/toggle_cheer_style"
+        style="@null"
+        android:layout_width="168dp"
+        android:layout_height="200dp"
+        android:background="@drawable/selector_all_team_toggle"
+        android:stateListAnimator="@null"
+        android:textOff="@null"
+        android:textOn="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cheer_style_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginTop="@dimen/smedium"
+        android:layout_marginEnd="@dimen/small"
+        android:textAppearance="@style/Typography.Body01.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_cheer_style"
+        app:layout_constraintStart_toStartOf="@+id/toggle_cheer_style"
+        app:layout_constraintTop_toTopOf="@+id/toggle_cheer_style"
+        tools:text="감독 스타일" />
+
+    <TextView
+        android:id="@+id/tv_cheer_style_explain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginTop="@dimen/xtiny"
+        android:layout_marginEnd="@dimen/small"
+        android:textAppearance="@style/Typography.Body03.Medium"
+        android:textColor="@color/grey500"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_cheer_style"
+        app:layout_constraintStart_toStartOf="@+id/toggle_cheer_style"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cheer_style_name"
+        tools:text="여기선 이렇게 하고 저기선\n저렇게 했어야지" />
+
+    <ImageView
+        android:id="@+id/iv_cheer_style"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="@dimen/small"
+        android:layout_marginBottom="@dimen/smedium"
+        app:layout_constraintBottom_toBottomOf="@+id/toggle_cheer_style"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_cheer_style" />
+</androidx.constraintlayout.widget.ConstraintLayout>

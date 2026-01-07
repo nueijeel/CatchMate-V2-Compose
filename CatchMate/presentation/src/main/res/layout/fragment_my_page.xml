@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey50"
+    tools:context=".view.mypage.MyPageFragment">
+
+    <include
+        android:id="@+id/layout_header_my_page"
+        layout="@layout/layout_header_setting_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.catchmate.presentation.view.mypage.MyPageUserProfileView
+        android:id="@+id/view_my_page_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header_my_page">
+
+    </com.catchmate.presentation.view.mypage.MyPageUserProfileView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_guest_my_page"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey0"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header_my_page">
+
+        <view
+            android:id="@+id/iv_guest_my_page"
+            class="de.hdodenhof.circleimageview.CircleImageView"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_notification_samsung_device"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_guest_title_my_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/mypage_guest_title"
+            android:textAppearance="@style/Typography.Body01.SemiBold"
+            app:layout_constraintStart_toEndOf="@+id/iv_guest_my_page"
+            app:layout_constraintTop_toTopOf="@+id/iv_guest_my_page" />
+
+        <TextView
+            android:id="@+id/tv_guest_content_my_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_all_rect_r2"
+            android:backgroundTint="@color/grey100"
+            android:paddingLeft="4dp"
+            android:paddingTop="1dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/mypage_guest_content"
+            android:textAppearance="@style/Typography.Caption01.Medium"
+            android:textColor="@color/grey500"
+            app:layout_constraintStart_toStartOf="@+id/tv_guest_title_my_page"
+            app:layout_constraintTop_toBottomOf="@+id/tv_guest_title_my_page" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_guest_my_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/vec_all_right_arrow_20dp"
+            android:tint="@color/grey500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/sv_my_page"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_my_page_profile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tiny"
+                android:background="@color/grey0"
+                android:paddingLeft="@dimen/main_grid_margin"
+                android:paddingTop="@dimen/small"
+                android:paddingRight="@dimen/main_grid_margin"
+                android:paddingBottom="@dimen/small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_my_page_profile">
+
+                <TextView
+                    android:id="@+id/tv_my_page_life_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mypage_menu_title_life"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    android:textColor="@color/grey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_my_page_my_post"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xsmall"
+                    android:paddingTop="@dimen/small"
+                    android:paddingBottom="@dimen/small"
+                    android:text="@string/mypage_menu_my_post"
+                    android:textAppearance="@style/Typography.Body01.Medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_page_life_title" />
+
+                <TextView
+                    android:id="@+id/tv_my_page_sent_join"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/small"
+                    android:paddingBottom="@dimen/small"
+                    android:text="@string/mypage_sent_join"
+                    android:textAppearance="@style/Typography.Body01.Medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_page_my_post" />
+
+                <LinearLayout
+                    android:id="@+id/layout_my_page_received_join"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/small"
+                    android:paddingBottom="@dimen/small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_page_sent_join">
+
+                    <TextView
+                        android:id="@+id/tv_my_page_received_join"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/xstiny"
+                        android:text="@string/mypage_received_join"
+                        android:textAppearance="@style/Typography.Body01.Medium" />
+
+                    <TextView
+                        android:id="@+id/tv_my_page_received_join_unread_count"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/shape_chatting_unread_message_count"
+                        android:gravity="center"
+                        android:textAppearance="@style/Typography.Body03.Medium"
+                        android:textColor="@color/grey0"
+                        android:textSize="10sp"
+                        android:visibility="invisible"
+                        tools:text="2" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tiny"
+                android:background="@color/grey0"
+                android:paddingLeft="@dimen/main_grid_margin"
+                android:paddingTop="@dimen/small"
+                android:paddingRight="@dimen/main_grid_margin"
+                android:paddingBottom="@dimen/small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <TextView
+                    android:id="@+id/tv_my_page_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mypage_support"
+                    android:textAppearance="@style/Typography.Body02.Medium"
+                    android:textColor="@color/grey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_my_page_announcement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xsmall"
+                    android:paddingTop="@dimen/small"
+                    android:paddingBottom="@dimen/small"
+                    android:text="@string/mypage_announcement"
+                    android:textAppearance="@style/Typography.Body01.Medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_page_support" />
+
+                <TextView
+                    android:id="@+id/tv_my_page_service_center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/small"
+                    android:paddingBottom="@dimen/small"
+                    android:text="@string/mypage_service_center"
+                    android:textAppearance="@style/Typography.Body01.Medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_page_announcement" />
+
+                <TextView
+                    android:id="@+id/tv_my_page_terms_and_conditions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/small"
+                    android:paddingBottom="@dimen/small"
+                    android:text="@string/mypage_terms_and_conditions"
+                    android:textAppearance="@style/Typography.Body01.Medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_page_service_center" />
+
+                <TextView
+                    android:id="@+id/tv_my_page_information"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/small"
+                    android:paddingBottom="@dimen/small"
+                    android:text="@string/mypage_information"
+                    android:textAppearance="@style/Typography.Body01.Medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_page_terms_and_conditions" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

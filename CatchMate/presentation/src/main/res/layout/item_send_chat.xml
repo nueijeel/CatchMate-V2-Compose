@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_send_chat_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/shape_chatting_send_chat_bg"
+        android:maxWidth="240dp"
+        android:paddingLeft="@dimen/small"
+        android:paddingTop="@dimen/xsmall"
+        android:paddingRight="@dimen/small"
+        android:paddingBottom="@dimen/xsmall"
+        android:text="행집욕부 행집욕부 행복에 집중하기 욕심부리지 않기 아자아자 화이팅"
+        android:textAppearance="@style/Typography.Body02.Medium"
+        android:textColor="@color/grey0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_send_chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/tiny"
+        android:textAppearance="@style/Typography.Caption01.Medium"
+        android:textColor="@color/grey500"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_send_chat_message"
+        app:layout_constraintEnd_toStartOf="@+id/tv_send_chat_message"
+        tools:text="오전 11:29" />
+</androidx.constraintlayout.widget.ConstraintLayout>

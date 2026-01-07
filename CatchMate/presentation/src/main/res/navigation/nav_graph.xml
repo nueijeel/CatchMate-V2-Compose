@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.catchmate.presentation.view.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_termsAndConditionFragment"
+            app:destination="@id/termsAndConditionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.catchmate.presentation.view.onboarding.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_teamOnboardingFragment"
+            app:destination="@id/teamOnboardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamOnboardingFragment"
+        android:name="com.catchmate.presentation.view.onboarding.TeamOnboardingFragment"
+        android:label="TeamOnboardingFragment">
+        <action
+            android:id="@+id/action_teamOnboardingFragment_to_cheerStyleOnboardingFragment"
+            app:destination="@id/cheerStyleOnboardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cheerStyleOnboardingFragment"
+        android:name="com.catchmate.presentation.view.onboarding.CheerStyleOnboardingFragment"
+        android:label="CheerStyleOnboardingFragment">
+        <action
+            android:id="@+id/action_cheerStyleOnboardingFragment_to_signupCompleteFragment"
+            app:destination="@id/signupCompleteFragment" />
+        <action
+            android:id="@+id/action_cheerStyleOnboardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupCompleteFragment"
+        android:name="com.catchmate.presentation.view.onboarding.SignupCompleteFragment"
+        android:label="SignupCompleteFragment">
+        <action
+            android:id="@+id/action_signupCompleteFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.catchmate.presentation.view.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_readPostFragment"
+            app:destination="@id/readPostFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.catchmate.presentation.view.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_serviceCenterAnswerFragment"
+            app:destination="@id/serviceCenterAnswerFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_receivedJoinFragment"
+            app:destination="@id/receivedJoinFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_chattingRoomFragment"
+            app:destination="@id/chattingRoomFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.catchmate.presentation.view.post.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post" >
+        <action
+            android:id="@+id/action_addPostFragment_to_readPostFragment"
+            app:destination="@id/readPostFragment" />
+        <action
+            android:id="@+id/action_addPostFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_addPostFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readPostFragment"
+        android:name="com.catchmate.presentation.view.post.ReadPostFragment"
+        android:label="fragment_read_post"
+        tools:layout="@layout/fragment_read_post" >
+        <action
+            android:id="@+id/action_readPostFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_readPostFragment_to_addPostFragment"
+            app:destination="@id/addPostFragment" />
+        <action
+            android:id="@+id/action_readPostFragment_to_myPostFragment"
+            app:destination="@id/myPostFragment" />
+        <action
+            android:id="@+id/action_readPostFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_readPostFragment_to_chattingRoomFragment"
+            app:destination="@id/chattingRoomFragment" />
+        <action
+            android:id="@+id/action_readPostFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myPageFragment"
+        android:name="com.catchmate.presentation.view.mypage.MyPageFragment"
+        android:label="fragment_my_page"
+        tools:layout="@layout/fragment_my_page">
+        <action
+            android:id="@+id/action_myPageFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_myPageFragment_to_sentJoinFragment"
+            app:destination="@id/sentJoinFragment" />
+        <action
+            android:id="@+id/action_myPageFragment_to_myPageSettingFragment"
+            app:destination="@id/myPageSettingFragment" />
+        <action
+            android:id="@+id/action_myPageFragment_to_receivedJoinFragment"
+            app:destination="@id/receivedJoinFragment" />
+        <action
+            android:id="@+id/action_myPageFragment_to_myPostFragment"
+            app:destination="@id/myPostFragment" />
+        <action
+            android:id="@+id/action_myPageFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_myPageFragment_to_serviceCenterFragment"
+            app:destination="@id/serviceCenterFragment" />
+        <action
+            android:id="@+id/action_myPageFragment_to_termsAndPoliciesFragment"
+            app:destination="@id/termsAndPoliciesFragment" />
+        <action
+            android:id="@+id/action_myPageFragment_to_announcementFragment"
+            app:destination="@id/announcementFragment" />
+        <action
+            android:id="@+id/action_myPageFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myPostFragment"
+        android:name="com.catchmate.presentation.view.mypage.MyPostFragment"
+        android:label="fragment_my_post"
+        tools:layout="@layout/fragment_my_post" >
+        <action
+            android:id="@+id/action_myPostFragment_to_readPostFragment"
+            app:destination="@id/readPostFragment" />
+        <action
+            android:id="@+id/action_myPostFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_myPostFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.catchmate.presentation.view.mypage.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sentJoinFragment"
+        android:name="com.catchmate.presentation.view.mypage.SentJoinFragment"
+        android:label="fragment_sent_join"
+        tools:layout="@layout/fragment_sent_join" >
+        <action
+            android:id="@+id/action_sentJoinFragment_to_readPostFragment"
+            app:destination="@id/readPostFragment" />
+        <action
+            android:id="@+id/action_sentJoinFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chattingHomeFragment"
+        android:name="com.catchmate.presentation.view.chatting.ChattingHomeFragment"
+        android:label="fragment_chatting_home"
+        tools:layout="@layout/fragment_chatting_home" >
+        <action
+            android:id="@+id/action_chattingHomeFragment_to_chattingRoomFragment"
+            app:destination="@id/chattingRoomFragment" />
+        <action
+            android:id="@+id/action_chattingHomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chattingRoomFragment"
+        android:name="com.catchmate.presentation.view.chatting.ChattingRoomFragment"
+        android:label="fragment_chatting_room"
+        tools:layout="@layout/fragment_chatting_room" >
+        <action
+            android:id="@+id/action_chattingRoomFragment_to_chattingSettingFragment"
+            app:destination="@id/chattingSettingFragment" />
+        <action
+            android:id="@+id/action_chattingRoomFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_chattingRoomFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_chattingRoomFragment_to_readPostFragment"
+            app:destination="@id/readPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.catchmate.presentation.view.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_readPostFragment"
+            app:destination="@id/readPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chattingSettingFragment"
+        android:name="com.catchmate.presentation.view.chatting.ChattingSettingFragment"
+        android:label="fragment_chatting_setting"
+        tools:layout="@layout/fragment_chatting_setting" >
+        <action
+            android:id="@+id/action_chattingSettingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myPageSettingFragment"
+        android:name="com.catchmate.presentation.view.mypage.MyPageSettingFragment"
+        android:label="fragment_my_page_setting"
+        tools:layout="@layout/fragment_my_page_setting" >
+        <action
+            android:id="@+id/action_myPageSettingFragment_to_accountInfoFragment"
+            app:destination="@id/accountInfoFragment" />
+        <action
+            android:id="@+id/action_myPageSettingFragment_to_notificationSettingFragment"
+            app:destination="@id/notificationSettingFragment" />
+        <action
+            android:id="@+id/action_myPageSettingFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_myPageSettingFragment_to_serviceCenterFragment"
+            app:destination="@id/serviceCenterFragment" />
+        <action
+            android:id="@+id/action_myPageSettingFragment_to_blockedSettingFragment"
+            app:destination="@id/blockedSettingFragment" />
+        <action
+            android:id="@+id/action_myPageSettingFragment_to_termsAndPoliciesFragment"
+            app:destination="@id/termsAndPoliciesFragment" />
+        <action
+            android:id="@+id/action_myPageSettingFragment_to_announcementFragment"
+            app:destination="@id/announcementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountInfoFragment"
+        android:name="com.catchmate.presentation.view.mypage.AccountInfoFragment"
+        android:label="fragment_account_info"
+        tools:layout="@layout/fragment_account_info" >
+        <action
+            android:id="@+id/action_accountInfoFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationSettingFragment"
+        android:name="com.catchmate.presentation.view.mypage.NotificationSettingFragment"
+        android:label="fragment_notification_setting"
+        tools:layout="@layout/fragment_notification_setting" >
+        <action
+            android:id="@+id/action_notificationSettingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receivedJoinFragment"
+        android:name="com.catchmate.presentation.view.mypage.ReceivedJoinFragment"
+        android:label="fragment_received_join"
+        tools:layout="@layout/fragment_received_join" >
+        <action
+            android:id="@+id/action_receivedJoinFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.catchmate.presentation.view.support.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" />
+    <fragment
+        android:id="@+id/serviceCenterFragment"
+        android:name="com.catchmate.presentation.view.support.ServiceCenterFragment"
+        android:label="fragment_service_center"
+        tools:layout="@layout/fragment_service_center" >
+        <action
+            android:id="@+id/action_serviceCenterFragment_to_serviceCenterInquiryFragment"
+            app:destination="@id/serviceCenterInquiryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceCenterInquiryFragment"
+        android:name="com.catchmate.presentation.view.support.ServiceCenterInquiryFragment"
+        android:label="fragment_service_center_inquiry"
+        tools:layout="@layout/fragment_service_center_inquiry" >
+        <action
+            android:id="@+id/action_serviceCenterInquiryFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceCenterAnswerFragment"
+        android:name="com.catchmate.presentation.view.support.ServiceCenterAnswerFragment"
+        android:label="fragment_service_center_answer"
+        tools:layout="@layout/fragment_service_center_answer" >
+        <action
+            android:id="@+id/action_serviceCenterAnswerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blockedSettingFragment"
+        android:name="com.catchmate.presentation.view.mypage.BlockedSettingFragment"
+        android:label="fragment_blocked_setting"
+        tools:layout="@layout/fragment_blocked_setting" >
+        <action
+            android:id="@+id/action_blockedSettingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.catchmate.presentation.view.support.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" >
+        <action
+            android:id="@+id/action_reportFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsAndPoliciesFragment"
+        android:name="com.catchmate.presentation.view.support.TermsAndPoliciesFragment"
+        android:label="fragment_terms_and_policies"
+        tools:layout="@layout/fragment_terms_and_policies" />
+    <fragment
+        android:id="@+id/announcementFragment"
+        android:name="com.catchmate.presentation.view.support.AnnouncementFragment"
+        android:label="fragment_announcement"
+        tools:layout="@layout/fragment_announcement">
+        <action
+            android:id="@+id/action_announcementFragment_to_announcementDetailFragment"
+            app:destination="@id/announcementDetailFragment" />
+        <action
+            android:id="@+id/action_announcementFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/announcementDetailFragment"
+        android:name="com.catchmate.presentation.view.support.AnnouncementDetailFragment"
+        android:label="fragment_announcement_detail"
+        tools:layout="@layout/fragment_announcement_detail" >
+        <action
+            android:id="@+id/action_announcementDetailFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsAndConditionFragment"
+        android:name="com.catchmate.presentation.view.onboarding.TermsAndConditionFragment"
+        android:label="fragment_terms_and_condition"
+        tools:layout="@layout/fragment_terms_and_condition" >
+        <action
+            android:id="@+id/action_termsAndConditionFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+</navigation>

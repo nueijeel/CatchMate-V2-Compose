@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey0">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_team_onboarding_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/base"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_team_onboarding_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="@dimen/base" />
+
+    <include
+        android:id="@+id/layout_team_onboarding_header"
+        layout="@layout/layout_header_onboarding"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_team_onboarding_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/team_onboarding_title1"
+        android:textAppearance="@style/Typography.HeadLine01.Regular"
+        app:layout_constraintStart_toStartOf="@+id/guideline_team_onboarding_left"
+        app:layout_constraintTop_toBottomOf="@+id/layout_team_onboarding_header" />
+
+    <TextView
+        android:id="@+id/tv_team_onboarding_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/team_onboarding_title2"
+        android:textAppearance="@style/Typography.HeadLine01.Regular"
+        app:layout_constraintStart_toStartOf="@+id/guideline_team_onboarding_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_team_onboarding_title1" />
+
+    <ImageView
+        android:id="@+id/iv_team_onboarding_essential_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/vec_all_essential_mark_6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_team_onboarding_title2"
+        app:layout_constraintStart_toEndOf="@+id/tv_team_onboarding_title2"
+        app:layout_constraintTop_toTopOf="@+id/tv_team_onboarding_title2" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/mlarge"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/layout_team_onboarding_footer"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_team_onboarding_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_team_onboarding_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_team_onboarding_title2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_nc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tbv_samsung"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:teamLogoImage="@drawable/vec_all_nc_dinos_logo"
+                app:teamNameText="@string/team_nc_dinos"
+                app:teamToggleBg="@drawable/selector_all_team_toggle" />
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_samsung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tbv_nc"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tbv_ssg"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:teamLogoImage="@drawable/vec_all_samsung_lions_logo"
+                app:teamNameText="@string/team_samsung_lions"
+                app:teamToggleBg="@drawable/selector_all_team_toggle" />
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_ssg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tbv_samsung"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:teamLogoImage="@drawable/vec_all_ssg_landers_logo"
+                app:teamNameText="@string/team_ssg_landers"
+                app:teamToggleBg="@drawable/selector_all_team_toggle" />
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_doosan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xsmall"
+                app:layout_constraintEnd_toStartOf="@+id/tbv_kt"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tbv_nc"
+                app:teamLogoImage="@drawable/vec_all_doosan_bears_logo"
+                app:teamNameText="@string/team_doosan_bears"
+                app:teamToggleBg="@drawable/selector_all_team_toggle" />
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_kt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tbv_doosan"
+                app:layout_constraintTop_toTopOf="@+id/tbv_doosan"
+                app:layout_constraintEnd_toStartOf="@+id/tbv_hanwha"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:teamLogoImage="@drawable/vec_all_kt_wiz_logo"
+                app:teamNameText="@string/team_kt_wiz"
+                app:teamToggleBg="@drawable/selector_all_team_toggle"/>
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_hanwha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tbv_kt"
+                app:layout_constraintTop_toTopOf="@+id/tbv_doosan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:teamLogoImage="@drawable/vec_all_hanwha_eagles_logo"
+                app:teamNameText="@string/team_hanwha_eagles"
+                app:teamToggleBg="@drawable/selector_all_team_toggle"/>
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_lotte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xsmall"
+                app:layout_constraintEnd_toStartOf="@+id/tbv_kia"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tbv_doosan"
+                app:teamLogoImage="@drawable/vec_all_lotte_giants_logo"
+                app:teamNameText="@string/team_lotte_giants"
+                app:teamToggleBg="@drawable/selector_all_team_toggle" />
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_kia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tbv_lotte"
+                app:layout_constraintTop_toTopOf="@+id/tbv_lotte"
+                app:layout_constraintEnd_toStartOf="@+id/tbv_lg"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:teamLogoImage="@drawable/vec_all_kia_tigers_logo"
+                app:teamNameText="@string/team_kia_tigers"
+                app:teamToggleBg="@drawable/selector_all_team_toggle"/>
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_lg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tbv_kia"
+                app:layout_constraintTop_toTopOf="@+id/tbv_lotte"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:teamLogoImage="@drawable/vec_all_lg_twins_logo"
+                app:teamNameText="@string/team_lg_twins"
+                app:teamToggleBg="@drawable/selector_all_team_toggle"/>
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_kiwoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xsmall"
+                app:layout_constraintEnd_toStartOf="@+id/tbv_pacifist"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tbv_lotte"
+                app:teamLogoImage="@drawable/vec_all_kiwoom_heroes_logo"
+                app:teamNameText="@string/team_kiwoom_heroes"
+                app:teamToggleBg="@drawable/selector_all_team_toggle" />
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_pacifist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tbv_kiwoom"
+                app:layout_constraintTop_toTopOf="@+id/tbv_kiwoom"
+                app:layout_constraintEnd_toStartOf="@+id/tbv_baseball_beginner"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:teamLogoImage="@drawable/img_pacifist_icon"
+                app:teamNameText="@string/pacifist"
+                app:teamToggleBg="@drawable/selector_all_team_toggle"/>
+
+            <com.catchmate.presentation.view.onboarding.TeamButtonView
+                android:id="@+id/tbv_baseball_beginner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xlarge"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toEndOf="@+id/tbv_pacifist"
+                app:layout_constraintTop_toTopOf="@+id/tbv_kiwoom"
+                app:teamLogoImage="@drawable/imb_baseball_beginner_icon"
+                app:teamNameText="@string/baseball_beginner"
+                app:teamToggleBg="@drawable/selector_all_team_toggle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/layout_team_onboarding_footer"
+        layout="@layout/layout_footer_one_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

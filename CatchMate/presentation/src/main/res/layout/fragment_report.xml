@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey0"
+    tools:context=".view.support.ReportFragment" >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="18dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="18dp" />
+
+    <ImageView
+        android:id="@+id/iv_back_report"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/vec_all_left_arrow_20dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_report"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/sv_report"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_footer_report"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_report"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_report"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back_report">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_title_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAppearance="@style/Typography.HeadLine01.Regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/report_title" />
+
+            <view
+                android:id="@+id/toggle_profanity_report"
+                class="com.catchmate.presentation.view.post.TeamToggleCheckButtonView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_report"
+                app:teamToggleCheckButtonTeamNameText="@string/report_profanity" />
+
+            <view
+                android:id="@+id/toggle_defamation_report"
+                class="com.catchmate.presentation.view.post.TeamToggleCheckButtonView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toggle_profanity_report"
+                app:teamToggleCheckButtonTeamNameText="@string/report_defamation" />
+
+            <view
+                android:id="@+id/toggle_privacy_invasion_report"
+                class="com.catchmate.presentation.view.post.TeamToggleCheckButtonView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toggle_defamation_report"
+                app:teamToggleCheckButtonTeamNameText="@string/report_privacy_invasion" />
+
+            <view
+                android:id="@+id/toggle_spam_report"
+                class="com.catchmate.presentation.view.post.TeamToggleCheckButtonView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toggle_privacy_invasion_report"
+                app:teamToggleCheckButtonTeamNameText="@string/report_spam" />
+
+            <view
+                android:id="@+id/toggle_advertisement_report"
+                class="com.catchmate.presentation.view.post.TeamToggleCheckButtonView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toggle_spam_report"
+                app:teamToggleCheckButtonTeamNameText="@string/report_advertisement" />
+
+            <view
+                android:id="@+id/toggle_false_information_report"
+                class="com.catchmate.presentation.view.post.TeamToggleCheckButtonView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toggle_advertisement_report"
+                app:teamToggleCheckButtonTeamNameText="@string/report_false_information" />
+
+            <view
+                android:id="@+id/toggle_other_report"
+                class="com.catchmate.presentation.view.post.TeamToggleCheckButtonView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toggle_false_information_report"
+                app:teamToggleCheckButtonTeamNameText="@string/report_other" />
+
+            <EditText
+                android:id="@+id/edt_content_report"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/selector_all_edt_bg"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="@string/report_content_hint"
+                android:inputType="text|textMultiLine"
+                android:overScrollMode="always"
+                android:paddingLeft="@dimen/small"
+                android:paddingTop="17dp"
+                android:paddingRight="@dimen/small"
+                android:paddingBottom="17dp"
+                android:scrollbars="vertical"
+                android:textAppearance="@style/Typography.Body02.SemiBold"
+                android:textColor="@color/grey800"
+                android:textColorHint="@color/grey400"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toggle_other_report" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/layout_footer_report"
+        layout="@layout/layout_footer_one_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

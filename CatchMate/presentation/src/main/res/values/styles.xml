@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomGenderChip" parent="Widget.Material3.Chip.Suggestion">
+        <item name="android:layout_width">168dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipStrokeColor">@color/color_signup_gender_chip_stroke</item>
+        <item name="chipBackgroundColor">@color/color_signup_gender_chip_bg</item>
+        <item name="closeIconVisible">false</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_signup_gender_chip_text</item>
+        <item name="chipCornerRadius">8dp</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomPostGenderChip" parent="Widget.Material3.Chip.Suggestion">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipStrokeColor">@android:color/transparent</item>
+        <item name="chipBackgroundColor">@color/color_post_gender_chip_bg</item>
+        <item name="closeIconVisible">false</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+        <item name="android:textAppearance">@style/Typography.Body02.SemiBold</item>
+        <item name="android:textColor">@color/color_post_gender_chip_text</item>
+        <item name="chipCornerRadius">20dp</item>
+    </style>
+
+    <style name="CustomNumberPicker" parent="ThemeOverlay.Material3">
+        <item name="colorControlNormal">@color/grey50</item>
+        <item name="android:textAppearance">@style/Typography.HeadLine03.Medium</item>
+        <item name="android:textColorPrimary">@color/grey800</item>
+    </style>
+
+    <style name="Widget.App.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Switch" parent="">
+        <item name="colorPrimary">@color/brand500</item>
+        <item name="colorSurfaceVariant">@color/brand50</item>
+    </style>
+
+    <style name="CustomPopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/shape_all_rect_r8_grey0</item>
+        <item name="android:backgroundTint">@color/grey0</item>
+        <item name="android:fontFamily">@style/Typography.Body02.Medium</item>
+        <item name="android:textColor">@color/grey800</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

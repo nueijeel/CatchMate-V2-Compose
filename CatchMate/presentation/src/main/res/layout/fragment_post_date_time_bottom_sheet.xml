@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_all_bottom_sheet_bg"
+    tools:context=".view.post.PostDateTimeBottomSheetFragment">
+
+    <ImageView
+        android:id="@+id/iv_post_date_time_handle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tiny"
+        android:src="@drawable/vec_all_bottom_sheet_handle_62dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CalendarView
+        android:id="@+id/cv_post_date_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:dateTextAppearance="@style/Typography.Body01.Medium"
+        android:focusedMonthDateColor="@color/brand500"
+        android:weekDayTextAppearance="@style/Typography.Body02.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_post_date_time_handle" />
+
+    <TextView
+        android:id="@+id/tv_post_date_time_game_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base"
+        android:text="@string/post_game_time_title"
+        android:textAppearance="@style/Typography.Body02.Medium"
+        android:textColor="@color/grey500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_post_date_time" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_post_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base"
+        android:layout_marginTop="@dimen/xsmall"
+        android:layout_marginEnd="@dimen/base"
+        android:scrollbarSize="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post_date_time_game_time_title">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cg_post_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_post_date_time_2pm"
+                style="@style/CustomPostGenderChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_game_time_2pm" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_post_date_time_5pm"
+                style="@style/CustomPostGenderChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_game_time_5pm" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_post_date_time_6pm"
+                style="@style/CustomPostGenderChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_game_time_6pm" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_post_date_time_6pm_30"
+                style="@style/CustomPostGenderChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_game_time_6pm_30" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <include
+        android:id="@+id/layout_footer_post_date_time"
+        layout="@layout/layout_footer_one_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hsv_post_date_time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

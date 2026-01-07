@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey50"
+    tools:context=".view.mypage.MyPageSettingFragment">
+
+    <include
+        android:id="@+id/layout_header_my_page_setting"
+        layout="@layout/layout_header_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_my_page_setting_user_setting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey0"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/main_grid_margin"
+        android:paddingTop="@dimen/small"
+        android:paddingRight="@dimen/main_grid_margin"
+        android:paddingBottom="@dimen/small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_header_my_page_setting">
+
+        <TextView
+            android:id="@+id/tv_my_page_setting_user_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mypage_setting_user_settings"
+            android:textAppearance="@style/Typography.Body02.Medium"
+            android:textColor="@color/grey500" />
+
+        <TextView
+            android:id="@+id/tv_my_page_setting_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xsmall"
+            android:paddingTop="@dimen/small"
+            android:paddingBottom="@dimen/small"
+            android:text="@string/mypage_setting_user_info"
+            android:textAppearance="@style/Typography.Body01.Medium" />
+
+        <TextView
+            android:id="@+id/tv_my_page_setting_notification_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/small"
+            android:paddingBottom="@dimen/small"
+            android:text="@string/mypage_setting_notification_setting"
+            android:textAppearance="@style/Typography.Body01.Medium" />
+
+        <TextView
+            android:id="@+id/tv_my_page_setting_blocked_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/small"
+            android:paddingBottom="@dimen/small"
+            android:text="@string/mypage_setting_block_setting"
+            android:textAppearance="@style/Typography.Body01.Medium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_my_page_setting_support"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tiny"
+        android:background="@color/grey0"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/main_grid_margin"
+        android:paddingTop="@dimen/small"
+        android:paddingRight="@dimen/main_grid_margin"
+        android:paddingBottom="@dimen/small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_my_page_setting_user_setting">
+
+        <TextView
+            android:id="@+id/tv_my_page_setting_support"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mypage_support"
+            android:textAppearance="@style/Typography.Body02.Medium"
+            android:textColor="@color/grey500" />
+
+        <TextView
+            android:id="@+id/tv_my_page_setting_announcement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xsmall"
+            android:paddingTop="@dimen/small"
+            android:paddingBottom="@dimen/small"
+            android:text="@string/mypage_announcement"
+            android:textAppearance="@style/Typography.Body01.Medium" />
+
+        <TextView
+            android:id="@+id/tv_my_page_setting_service_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/small"
+            android:paddingBottom="@dimen/small"
+            android:text="@string/mypage_service_center"
+            android:textAppearance="@style/Typography.Body01.Medium" />
+
+        <TextView
+            android:id="@+id/tv_my_page_setting_temrs_and_conditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/small"
+            android:paddingBottom="@dimen/small"
+            android:text="@string/mypage_terms_and_conditions"
+            android:textAppearance="@style/Typography.Body01.Medium" />
+
+        <TextView
+            android:id="@+id/tv_my_page_setting_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/small"
+            android:paddingBottom="@dimen/small"
+            android:text="@string/mypage_information"
+            android:textAppearance="@style/Typography.Body01.Medium" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

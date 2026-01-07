@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey0"
+    android:paddingLeft="@dimen/tab_bar_grid_margin"
+    android:paddingTop="10dp"
+    android:paddingRight="@dimen/tab_bar_grid_margin"
+    android:paddingBottom="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_liked_footer"
+        android:layout_width="67dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="38dp"
+        app:cardBackgroundColor="@color/grey50"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ToggleButton
+            android:id="@+id/toggle_liked_footer_liked"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_all_liked_btn"
+            android:textOff="@null"
+            android:textOn="@null" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_liked_footer_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/gutter"
+        android:background="@drawable/shape_all_submit_button"
+        android:gravity="center"
+        android:stateListAnimator="@null"
+        android:textAppearance="@style/Typography.Body01.SemiBold"
+        android:textColor="@color/grey0"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_liked_footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cv_liked_footer"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/post_register" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

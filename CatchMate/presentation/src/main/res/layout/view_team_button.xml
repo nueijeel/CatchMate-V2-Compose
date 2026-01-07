@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ToggleButton
+        android:id="@+id/toggle_team_button"
+        style="@null"
+        android:layout_width="109dp"
+        android:layout_height="0dp"
+        android:background="@drawable/selector_all_team_toggle"
+        android:stateListAnimator="@null"
+        android:textOff="@null"
+        android:textOn="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_team_button"
+        android:layout_width="95dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_team_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toggle_team_button" />
+
+    <TextView
+        android:id="@+id/tv_team_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textAppearance="@style/Typography.Body02.SemiBold"
+        android:textColor="@color/grey700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_team_button"
+        app:layout_constraintStart_toStartOf="@+id/toggle_team_button"
+        app:layout_constraintTop_toBottomOf="@+id/iv_team_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

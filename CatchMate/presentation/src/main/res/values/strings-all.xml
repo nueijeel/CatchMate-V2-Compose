@@ -1,0 +1,42 @@
+<resources>
+    <string name="team_nc_dinos">다이노스</string>
+    <string name="team_samsung_lions">라이온즈</string>
+    <string name="team_ssg_landers">랜더스</string>
+    <string name="team_doosan_bears">베어스</string>
+    <string name="team_kt_wiz">위즈</string>
+    <string name="team_hanwha_eagles">이글스</string>
+    <string name="team_lotte_giants">자이언츠</string>
+    <string name="team_kia_tigers">타이거즈</string>
+    <string name="team_lg_twins">트윈스</string>
+    <string name="team_kiwoom_heroes">히어로즈</string>
+
+    <string name="badge_kt_wiz">KT위즈</string>
+    <string name="badge_lotte_giants">롯데자이언츠</string>
+
+    <string name="badge_cheer_leader">응원단장</string>
+    <string name="badge_glutton">먹보</string>
+    <string name="badge_director">감독</string>
+    <string name="badge_mother_bird">어미새</string>
+    <string name="badge_stone">돌하르방</string>
+    <string name="badge_bodhisattva">보살</string>
+
+    <string name="female">여성</string>
+    <string name="male">남성</string>
+    <string name="posting">등록</string>
+    <string name="versus">VS</string>
+    <string name="next">다음</string>
+    <string name="finish">완료</string>
+    <string name="complete">확인</string>
+    <string name="application">적용</string>
+    <string name="reset">초기화</string>
+    <string name="all_divider"> | </string>
+
+    <string name="back_pressed_toast">\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.</string>
+
+    <string name="all_empty_string"></string>
+    <string name="all_guest_snackbar">로그인이 필요한 서비스입니다.</string>
+    <string name="notification_permission_dialog_title">서비스의 원활한 사용을 위해\n알림 수신 권한이 필요합니다</string>
+    <string name="notification_permission_dialog_pov_btn">설정으로 이동</string>
+    <string name="all_error_page_title">문제가 발생했어요\n다시 한번 시도해 주세요</string>
+    <string name="all_component_error_msg">오류가 발생했어요\n다시 시도해 주세요</string>
+</resources>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey0"
+    tools:context=".view.support.ServiceCenterFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left_service_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="18dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right_service_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="18dp" />
+
+    <include
+        android:id="@+id/layout_header_service_center"
+        layout="@layout/layout_header_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_service_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/Typography.HeadLine01.Regular"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header_service_center"
+        tools:text="@string/service_center_title" />
+
+    <TextView
+        android:id="@+id/tv_account_login_service_center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/service_center_account_and_login"
+        android:textAppearance="@style/Typography.Body01.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_service_center" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/grey100"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_account_login_service_center" />
+
+    <TextView
+        android:id="@+id/tv_board_service_center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/service_center_board"
+        android:textAppearance="@style/Typography.Body01.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/grey100"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_board_service_center" />
+
+    <TextView
+        android:id="@+id/tv_chatting_service_center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/service_center_chatting"
+        android:textAppearance="@style/Typography.Body01.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/grey100"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_chatting_service_center" />
+
+    <TextView
+        android:id="@+id/tv_user_service_center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/service_center_user"
+        android:textAppearance="@style/Typography.Body01.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/grey100"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_service_center" />
+
+    <TextView
+        android:id="@+id/tv_etc_service_center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/service_center_etc"
+        android:textAppearance="@style/Typography.Body01.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/grey100"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_service_center"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_service_center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_etc_service_center" />
+</androidx.constraintlayout.widget.ConstraintLayout>

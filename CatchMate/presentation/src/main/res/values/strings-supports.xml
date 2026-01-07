@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="information_title">정보</string>
+    <string name="information_app_name">CatchMate</string>
+    <string name="information_library"><u>Open Source Library</u></string>
+
+    <string name="service_center_title">%s님,\n무엇을 도와드릴까요?</string>
+    <string name="service_center_account_and_login">계정, 로그인 관련</string>
+    <string name="service_center_board">게시글 관련</string>
+    <string name="service_center_chatting">채팅 관련</string>
+    <string name="service_center_user">유저 관련</string>
+    <string name="service_center_etc">기타</string>
+
+    <string name="service_center_inquiry_title">자유롭게 적어주세요</string>
+    <string name="service_center_inquiry_content_letter_count_limit">/500</string>
+    <string name="service_center_inquiry_apply_btn">문의하기</string>
+    <string name="service_center_inquiry_complete">문의가 정상적으로 등록되었습니다.</string>
+
+    <string name="service_center_answer_title">%s 님의 문의에 대한 답변입니다</string>
+    <string name="service_center_answer_inquiry_title">문의 내용</string>
+    <string name="service_center_answer_answer_title">답변</string>
+
+    <string name="report_title">%s님의\n신고 사유를 알려주세요</string>
+    <string name="report_profanity">욕설 / 비하발언</string>
+    <string name="report_defamation">선수 혹은 특정인 비방</string>
+    <string name="report_privacy_invasion">개인 사생활 침해</string>
+    <string name="report_spam">게시글 도배</string>
+    <string name="report_advertisement">홍보성 게시글</string>
+    <string name="report_false_information">허위사실 유포</string>
+    <string name="report_other">기타</string>
+    <string name="report_content_hint">신고 사유에 대한 설명이 필요한 경우 입력해주세요</string>
+    <string name="report_toast">신고 완료되었어요</string>
+    <string name="report_btn">신고</string>
+
+    <string name="terms_and_policies_title">약관 및 정책</string>
+    <string name="terms_and_policies_personal_info">개인 정보 처리 방침</string>
+    <string name="terms_and_policies_service_policy">서비스 이용 약관</string>
+    <string name="terms_and_policies_community_guide">커뮤니티 이용 가이드</string>
+
+    <string name="announcement_no_list_msg">등록된 공지사항이 없어요</string>
+</resources>

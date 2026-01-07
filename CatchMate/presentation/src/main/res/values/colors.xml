@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Team -->
+    <color name="hanwha_eagles">#ED702D</color>
+    <color name="kia_tigers">#D62E34</color>
+    <color name="ssg_landers">#BD272C</color>
+    <color name="lg_twins">#B2243B</color>
+    <color name="kiwoom_heroes">#761426</color>
+    <color name="samsung_lions">#2559A6</color>
+    <color name="lotte_giants">#0A1D3F</color>
+    <color name="nc_dinos">#0C1C3A</color>
+    <color name="doosan_bears">#12122E</color>
+    <color name="kt_wiz">#2B2A29</color>
+
+    <!-- System -->
+    <color name="system_blue">#3182F6</color>
+    <color name="system_red">#EE5147</color>
+    <color name="system_team_logo_grey">#CFCFCF</color>
+
+    <!-- Brand -->
+    <color name="brand50">#FFDFDF</color>
+    <color name="brand100">#FEBFBF</color>
+    <color name="brand200">#FE9E9E</color>
+    <color name="brand300">#FE8F8F</color>
+    <color name="brand400">#FD7E7E</color>
+    <color name="brand500">#FD5E5E</color>
+    <color name="brand600">#DB5456</color>
+    <color name="brand700">#BA4B4D</color>
+    <color name="brand800">#994245</color>
+    <color name="brand900">#77383C</color>
+
+    <!-- Grey -->
+    <color name="grey0">#FFFFFF</color>
+    <color name="grey50">#FAFAFC</color>
+    <color name="grey100">#F2F2F5</color>
+    <color name="grey200">#E9E9EE</color>
+    <color name="grey300">#CCCCD0</color>
+    <color name="grey400">#AFAFB2</color>
+    <color name="grey500">#949297</color>
+    <color name="grey600">#76747B</color>
+    <color name="grey700">#595860</color>
+    <color name="grey800">#3B3B45</color>
+    <color name="grey900">#1E1E25</color>
+
+    <!-- Opacity -->
+    <color name="opacity5">#0D000021</color>
+    <color name="opacity15">#26000021</color>
+    <color name="opacity40">#66595860</color>
+    <color name="opacity80">#CC595860</color>
+</resources>

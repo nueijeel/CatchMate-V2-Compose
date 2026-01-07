@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_edit_profile_watch_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_all_bottom_sheet_bg"
+    android:minHeight="600dp"
+    tools:context=".view.mypage.EditProfileWatchStyleBottomSheetFragment">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/dhv_edit_profile_watch_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tiny"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vec_all_bottom_sheet_handle_62dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_edit_profile_watch_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/base"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/layout_footer_edit_profile_watch_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dhv_edit_profile_watch_style">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp">
+
+            <view
+                android:id="@+id/csbv_edit_profile_director"
+                class="com.catchmate.presentation.view.onboarding.CheerStyleButtonView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cheerStyleExplainText="@string/cheer_style_director_explain"
+                app:cheerStyleImage="@drawable/img_director_icon"
+                app:cheerStyleNameText="@string/cheer_style_director"
+                app:cheerStyleToggleBg="@drawable/selector_all_team_toggle"
+                app:layout_constraintEnd_toStartOf="@+id/csbv_edit_profile_mother_bird"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <view
+                android:id="@+id/csbv_edit_profile_mother_bird"
+                class="com.catchmate.presentation.view.onboarding.CheerStyleButtonView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cheerStyleExplainText="@string/cheer_style_mother_bird_explain"
+                app:cheerStyleImage="@drawable/img_mother_bird_icon"
+                app:cheerStyleNameText="@string/cheer_style_mother_bird"
+                app:cheerStyleToggleBg="@drawable/selector_all_team_toggle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toEndOf="@+id/csbv_edit_profile_director"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <view
+                android:id="@+id/csbv_edit_profile_cheer_leader"
+                class="com.catchmate.presentation.view.onboarding.CheerStyleButtonView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cheerStyleExplainText="@string/cheer_style_cheer_leader_explain"
+                app:cheerStyleImage="@drawable/img_cheer_leader_icon"
+                app:cheerStyleNameText="@string/cheer_style_cheer_leader"
+                app:cheerStyleToggleBg="@drawable/selector_all_team_toggle"
+                app:layout_constraintEnd_toStartOf="@+id/csbv_edit_profile_glutton"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/csbv_edit_profile_director" />
+
+            <view
+                android:id="@+id/csbv_edit_profile_glutton"
+                class="com.catchmate.presentation.view.onboarding.CheerStyleButtonView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cheerStyleExplainText="@string/cheer_style_glutton_explain"
+                app:cheerStyleImage="@drawable/img_glutton_icon"
+                app:cheerStyleNameText="@string/cheer_style_glutton"
+                app:cheerStyleToggleBg="@drawable/selector_all_team_toggle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toEndOf="@+id/csbv_edit_profile_cheer_leader"
+                app:layout_constraintTop_toTopOf="@+id/csbv_edit_profile_cheer_leader" />
+
+            <view
+                android:id="@+id/csbv_edit_profile_stone"
+                class="com.catchmate.presentation.view.onboarding.CheerStyleButtonView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="56dp"
+                app:cheerStyleExplainText="@string/cheer_style_stone_explain"
+                app:cheerStyleImage="@drawable/img_stone_icon"
+                app:cheerStyleNameText="@string/cheer_style_stone"
+                app:cheerStyleToggleBg="@drawable/selector_all_team_toggle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/csbv_edit_profile_bodhisattva"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/csbv_edit_profile_cheer_leader" />
+
+            <view
+                android:id="@+id/csbv_edit_profile_bodhisattva"
+                class="com.catchmate.presentation.view.onboarding.CheerStyleButtonView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cheerStyleExplainText="@string/cheer_style_bodhisattva_explain"
+                app:cheerStyleImage="@drawable/img_bodhisattva_icon"
+                app:cheerStyleNameText="@string/cheer_style_bodhisattva"
+                app:cheerStyleToggleBg="@drawable/selector_all_team_toggle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toEndOf="@+id/csbv_edit_profile_stone"
+                app:layout_constraintTop_toTopOf="@+id/csbv_edit_profile_stone" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/layout_footer_edit_profile_watch_style"
+        layout="@layout/layout_footer_one_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

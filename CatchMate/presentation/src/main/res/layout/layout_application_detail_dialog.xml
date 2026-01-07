@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_application_detail_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/grey0"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_application_detail_dialog_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_application_detail_dialog_divider1"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="07.03" />
+
+            <TextView
+                android:id="@+id/tv_application_detail_dialog_divider1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xstiny"
+                android:text="|"
+                app:layout_constraintEnd_toStartOf="@+id/tv_application_detail_dialog_time"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tv_application_detail_dialog_date"
+                app:layout_constraintTop_toTopOf="@+id/tv_application_detail_dialog_date" />
+
+            <TextView
+                android:id="@+id/tv_application_detail_dialog_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xstiny"
+                app:layout_constraintEnd_toStartOf="@+id/tv_application_detail_dialog_divider2"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tv_application_detail_dialog_divider1"
+                app:layout_constraintTop_toTopOf="@+id/tv_application_detail_dialog_divider1"
+                tools:text="18:30" />
+
+            <TextView
+                android:id="@+id/tv_application_detail_dialog_divider2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xstiny"
+                android:text="|"
+                app:layout_constraintEnd_toStartOf="@+id/tv_application_detail_dialog_place"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tv_application_detail_dialog_time"
+                app:layout_constraintTop_toTopOf="@+id/tv_application_detail_dialog_time" />
+
+            <TextView
+                android:id="@+id/tv_application_detail_dialog_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xstiny"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_application_detail_dialog_divider2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tv_application_detail_dialog_divider2"
+                app:layout_constraintTop_toTopOf="@+id/tv_application_detail_dialog_divider2"
+                tools:text="잠실" />
+
+            <ImageView
+                android:id="@+id/iv_application_detail_dialog_home_team_bg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="28dp"
+                android:background="@drawable/shape_all_rect_r6"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_application_detail_dialog_versus"
+                app:layout_constraintEnd_toStartOf="@+id/tv_application_detail_dialog_versus"
+                app:layout_constraintTop_toTopOf="@+id/tv_application_detail_dialog_versus" />
+
+            <ImageView
+                android:id="@+id/iv_application_detail_dialog_home_team_logo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_application_detail_dialog_home_team_bg"
+                app:layout_constraintEnd_toEndOf="@+id/iv_application_detail_dialog_home_team_bg"
+                app:layout_constraintStart_toStartOf="@+id/iv_application_detail_dialog_home_team_bg"
+                app:layout_constraintTop_toTopOf="@+id/iv_application_detail_dialog_home_team_bg" />
+
+            <TextView
+                android:id="@+id/tv_application_detail_dialog_versus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:text="@string/versus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_application_detail_dialog_time" />
+
+            <ImageView
+                android:id="@+id/iv_application_detail_dialog_away_team_bg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="28dp"
+                android:background="@drawable/shape_all_rect_r6"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_application_detail_dialog_versus"
+                app:layout_constraintStart_toEndOf="@+id/tv_application_detail_dialog_versus"
+                app:layout_constraintTop_toTopOf="@+id/tv_application_detail_dialog_versus" />
+
+            <ImageView
+                android:id="@+id/iv_application_detail_dialog_away_team_logo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_application_detail_dialog_away_team_bg"
+                app:layout_constraintEnd_toEndOf="@+id/iv_application_detail_dialog_away_team_bg"
+                app:layout_constraintStart_toStartOf="@+id/iv_application_detail_dialog_away_team_bg"
+                app:layout_constraintTop_toTopOf="@+id/iv_application_detail_dialog_away_team_bg" />
+
+            <TextView
+                android:id="@+id/tv_application_detail_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xsmall"
+                android:textAppearance="@style/Typography.Body01.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_application_detail_dialog_home_team_bg"
+                tools:text="타이틀" />
+
+            <EditText
+                android:id="@+id/edt_application_detail_dialog_explain"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="@dimen/base"
+                android:layout_marginTop="@dimen/small"
+                android:layout_marginRight="@dimen/base"
+                android:background="@drawable/selector_all_edt_bg"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/application_detail_dialog_hint"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/small"
+                android:textAppearance="@style/Typography.Body02.Medium"
+                android:textColor="@color/grey800"
+                android:textColorHint="@color/grey400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_application_detail_dialog_title" />
+
+            <TextView
+                android:id="@+id/tv_application_detail_dialog_explain"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/selector_all_edt_bg"
+                android:padding="@dimen/small"
+                android:textAppearance="@style/Typography.Body02.Medium"
+                android:textColor="@color/grey800"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_application_detail_dialog_title"
+                tools:text="hello world" />
+
+            <View
+                android:id="@+id/divider_application_detail_dialog_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/base"
+                android:background="@color/grey100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_application_detail_dialog_explain" />
+
+            <View
+                android:id="@+id/divider_application_detail_dialog_vertical"
+                android:layout_width="1dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="@dimen/small"
+                android:layout_marginBottom="@dimen/base"
+                android:background="@color/grey100"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_application_detail_dialog_horizontal" />
+
+            <TextView
+                android:id="@+id/tv_application_detail_dialog_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/Typography.Body02.Medium"
+                app:layout_constraintBottom_toBottomOf="@+id/divider_application_detail_dialog_vertical"
+                app:layout_constraintEnd_toStartOf="@+id/divider_application_detail_dialog_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/divider_application_detail_dialog_vertical" />
+
+            <TextView
+                android:id="@+id/tv_application_detail_dialog_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/base"
+                android:background="@null"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/Typography.Body02.Medium"
+                android:textColor="@color/brand500"
+                app:layout_constraintBottom_toBottomOf="@+id/divider_application_detail_dialog_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/divider_application_detail_dialog_vertical"
+                app:layout_constraintTop_toTopOf="@+id/divider_application_detail_dialog_vertical" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

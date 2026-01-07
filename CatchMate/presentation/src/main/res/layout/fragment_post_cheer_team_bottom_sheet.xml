@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_all_bottom_sheet_bg"
+    tools:context=".view.post.PostCheerTeamBottomSheetFragment">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/draghandle_post_cheer_team"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tiny"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vec_all_bottom_sheet_handle_62dp" />
+
+    <com.catchmate.presentation.view.post.TeamToggleCheckButtonView
+        android:id="@+id/ttcbv_post_cheer_team_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base"
+        android:layout_marginTop="@dimen/base"
+        android:layout_marginRight="@dimen/base"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/draghandle_post_cheer_team" />
+
+    <com.catchmate.presentation.view.post.TeamToggleCheckButtonView
+        android:id="@+id/ttcbv_post_cheer_team_away"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="@dimen/base"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ttcbv_post_cheer_team_home" />
+
+    <include
+        android:id="@+id/layout_footer_post_cheer_team"
+        layout="@layout/layout_footer_one_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ttcbv_post_cheer_team_away" />
+</androidx.constraintlayout.widget.ConstraintLayout>
