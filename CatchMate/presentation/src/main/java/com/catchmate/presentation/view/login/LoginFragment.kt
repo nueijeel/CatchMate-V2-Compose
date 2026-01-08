@@ -16,7 +16,6 @@ import com.catchmate.presentation.viewmodel.LocalDataViewModel
 import com.catchmate.presentation.viewmodel.LoginViewModel
 import com.catchmate.presentation.viewmodel.MainViewModel
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -91,22 +90,10 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                 }
             }
         }
-        loginViewModel.noCredentialException.observe(viewLifecycleOwner) { exception ->
-            Snackbar.make(requireView(), exception, Snackbar.LENGTH_SHORT).show()
-        }
     }
 
     private fun initView() {
         binding.apply {
-            cvLoginKakao.setOnClickListener {
-                loginViewModel.kakaoLogin()
-            }
-            ivLoginNaver.setOnClickListener {
-                loginViewModel.naverLogin(requireActivity())
-            }
-            ivLoginGoogle.setOnClickListener {
-                loginViewModel.googleLogin(requireActivity())
-            }
             tvLoginGuest.setOnClickListener {
                 mainViewModel.setGuestLogin(true)
                 localDataViewModel.saveAccessToken("")

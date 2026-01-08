@@ -35,14 +35,7 @@ hilt = "2.51.1"
 # Circle Image View
 circleimageview = "3.1.0"
 
-# Kakao
-kakao = "2.20.3"
-
-# Naver
-naver = "5.8.0"
-
 # Google
-googleid = "1.1.1"
 google-services = "4.4.2"
 firebase-bom = "34.0.0"
 google-api-client = "2.2.0"
@@ -98,11 +91,6 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.r
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 
-kakao-user = { group = "com.kakao.sdk", name = "v2-user", version.ref = "kakao" }
-
-naver-user = { group = "com.navercorp.nid", name = "oauth", version.ref = "naver" }
-
-googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }

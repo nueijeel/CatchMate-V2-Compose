@@ -62,9 +62,9 @@ class MainActivity : AppCompatActivity() {
         Log.i("intent", "${intent.data} / ${intent.extras}")
 
         initViewModel()
-        if (intent.extras == null) {
-            localDataViewModel.getAccessToken()
-        }
+//        if (intent.extras == null) {
+//            localDataViewModel.getAccessToken()
+//        }
         initNavController()
         initBottomNavigationView()
         observeChatNotifications()
