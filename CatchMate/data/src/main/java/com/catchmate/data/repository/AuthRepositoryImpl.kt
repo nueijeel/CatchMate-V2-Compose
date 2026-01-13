@@ -1,51 +1,53 @@
 package com.catchmate.data.repository
 
+import android.app.Activity
 import android.util.Log
-import com.catchmate.data.datasource.remote.AuthService
-import com.catchmate.data.datasource.remote.RetrofitClient
-import com.catchmate.data.mapper.AuthMapper
-import com.catchmate.data.util.ApiResponseHandleUtil.apiCall
-import com.catchmate.domain.model.auth.DeleteLogoutResponse
-import com.catchmate.domain.model.auth.GetCheckNicknameResponse
-import com.catchmate.domain.model.auth.PostLoginRequest
-import com.catchmate.domain.model.auth.PostLoginResponse
+import androidx.credentials.exceptions.GetCredentialCancellationException
+import androidx.credentials.exceptions.NoCredentialException
+import com.catchmate.data.datasource.local.GoogleLoginDataSource
+import com.catchmate.domain.exception.GoogleLoginException
+import com.catchmate.domain.exception.Result
 import com.catchmate.domain.repository.AuthRepository
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
+import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 
 class AuthRepositoryImpl
-    @Inject
-    constructor(
-        retrofitClient: RetrofitClient,
-    ) : AuthRepository {
-        private val authApi = retrofitClient.createApi<AuthService>()
-        private val tag = "AuthRepo"
+@Inject
+constructor(
+    private val firebaseAuth: FirebaseAuth,
+    private val googleLoginDataSource: GoogleLoginDataSource,
+) : AuthRepository {
+    override suspend fun signInWithGoogle(activity: Activity): Result<String> {
+        return try {
+            val idToken = googleLoginDataSource.getGoogleIdToken(activity)
 
-        override suspend fun postAuthLogin(postLoginRequest: PostLoginRequest): PostLoginResponse? =
-            try {
-                val response = authApi.postAuthLogin(AuthMapper.toPostLoginRequestDTO(postLoginRequest))
-                if (response.isSuccessful) {
-                    Log.d("AuthRepository", "통신 성공 : ${response.code()}")
-                    response.body()?.let { AuthMapper.toPostLoginResponse(it) } ?: throw Exception("Empty Response")
+            if (idToken is Result.Success) {
+                val realToken = idToken.data
+                Log.d("TokenCheck", "전달되는 토큰: $realToken")
+                val credential = GoogleAuthProvider.getCredential(realToken, null)
+                val authResult = firebaseAuth.signInWithCredential(credential).await()
+
+                if (authResult.user != null) {
+                    Result.Success("${authResult.user?.uid} / ${authResult.user?.email}")
                 } else {
-                    Log.d("AuthRepository", "통신 실패 : ${response.code()}")
-                    null
+                    Result.Error(exception = GoogleLoginException.Unknown(Exception("Firebase user is null")))
                 }
-            } catch (e: Exception) {
-                e.printStackTrace()
-                null
+            } else {
+                Result.Error(exception = GoogleLoginException.Unknown(Exception("Token is not String")))
             }
-
-        override suspend fun getAuthCheckNickname(nickName: String): Result<GetCheckNicknameResponse> =
-            apiCall(
-                tag = this.tag,
-                apiFunction = { authApi.getAuthCheckNickname(nickName) },
-                transform = { AuthMapper.toGetCheckNicknameResponse(it!!) },
-            )
-
-        override suspend fun deleteAuthLogout(refreshToken: String): Result<DeleteLogoutResponse> =
-            apiCall(
-                tag = this.tag,
-                apiFunction = { authApi.deleteAuthLogout(refreshToken) },
-                transform = { AuthMapper.toDeleteLogoutResponse(it!!) },
-            )
+        } catch (e: Exception) {
+            val exception = when (e) {
+                is GetCredentialCancellationException, is GoogleLoginException.Cancelled -> GoogleLoginException.Cancelled
+                is NoCredentialException, is GoogleLoginException.NoCredentials -> GoogleLoginException.NoCredentials
+                is GoogleLoginException.TokenParsing -> GoogleLoginException.TokenParsing
+                else -> {
+                    Log.e("GoogleLoginError", "원인: ${e.message}", e)
+                    GoogleLoginException.Unknown(e)
+                }
+            }
+            Result.Error(exception = exception)
+        }
     }
+}

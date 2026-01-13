@@ -10,7 +10,7 @@ androidx-constraintlayout = "2.1.4"
 androidx-lifecycle = "2.8.3"
 androidx-activity-ktx = "1.9.0"
 androidx-fragment-ktx = "1.8.1"
-androidx-credentials = "1.2.2"
+androidx-credentials = "1.3.0"
 androidx-navigation = "2.7.7"
 androidx-security-crypto-ktx = "1.1.0-alpha06"
 androidx-recyclerview = "1.3.2"
@@ -35,18 +35,12 @@ hilt = "2.51.1"
 # Circle Image View
 circleimageview = "3.1.0"
 
-# Kakao
-kakao = "2.20.3"
-
-# Naver
-naver = "5.8.0"
-
 # Google
-googleid = "1.1.1"
 google-services = "4.4.2"
-firebase-bom = "34.0.0"
+firebase-bom = "34.7.0"
 google-api-client = "2.2.0"
 firebase-crashlytics = "3.0.5"
+googleid = "1.1.1"
 
 # Retrofit, Okhttp
 retrofit = "2.11.0"
@@ -98,16 +92,13 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.r
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 
-kakao-user = { group = "com.kakao.sdk", name = "v2-user", version.ref = "kakao" }
-
-naver-user = { group = "com.navercorp.nid", name = "oauth", version.ref = "naver" }
-
-googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
 firebase-crashlytics-ndk = { group = "com.google.firebase", name = "firebase-crashlytics-ndk" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
 google-api-client = { group = "com.google.api-client", name = "google-api-client", version.ref = "google-api-client" }
+googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }

@@ -11,7 +11,7 @@ import com.catchmate.domain.exception.Result
 import com.catchmate.domain.model.auth.PostLoginRequest
 import com.catchmate.domain.model.auth.PostLoginResponse
 import com.catchmate.domain.usecase.auth.PostAuthLoginUseCase
-import com.catchmate.domain.usecase.auth.SocialLoginUseCase
+import com.catchmate.domain.usecase.auth.SignInWithGoogleUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -20,47 +20,14 @@ import javax.inject.Inject
 class LoginViewModel
     @Inject
     constructor(
-        private val socialLoginUseCase: SocialLoginUseCase,
-        private val postAuthLoginUseCase: PostAuthLoginUseCase,
+        private val signWithGoogleUseCase: SignInWithGoogleUseCase,
     ) : ViewModel() {
-        private val _postLoginRequest = MutableLiveData<PostLoginRequest?>()
-        val postLoginRequest: LiveData<PostLoginRequest?>
-            get() = _postLoginRequest
-
-        private val _postLoginResponse = MutableLiveData<PostLoginResponse?>()
-        val postLoginResponse: LiveData<PostLoginResponse?>
-            get() = _postLoginResponse
-
-        private val _noCredentialException = MutableLiveData<String>()
-        val noCredentialException: LiveData<String>
-            get() = _noCredentialException
-
-        fun initPostLoginRequest() {
-            _postLoginRequest.value = null
-        }
-
-        fun initPostLoginResponse() {
-            _postLoginResponse.value = null
-        }
-
-        fun kakaoLogin() {
+        fun signWithGoogle(activity: Activity) {
             viewModelScope.launch {
-                _postLoginRequest.value = socialLoginUseCase.loginWithKakao()
-            }
-        }
-
-        fun naverLogin(activity: Activity) {
-            viewModelScope.launch {
-                _postLoginRequest.value = socialLoginUseCase.loginWithNaver(activity)
-            }
-        }
-
-        fun googleLogin(activity: Activity) {
-            viewModelScope.launch {
-                val result = socialLoginUseCase.loginWithGoogle(activity)
+                val result = signWithGoogleUseCase.signInWithGoogle(activity)
                 when (result) {
                     is Result.Success -> {
-                        _postLoginRequest.value = result.data
+                        Log.d("login vm", result.data)
                     }
 
                     is Result.Error -> {
@@ -70,7 +37,7 @@ class LoginViewModel
                             }
 
                             is GoogleLoginException.NoCredentials -> {
-                                _noCredentialException.value = "앱 로그인을 위해서 기기에 Google 계정을 등록해주세요."
+                                "앱 로그인을 위해서 기기에 Google 계정을 등록해주세요."
                             }
 
                             is GoogleLoginException.TokenParsing -> {
@@ -87,12 +54,6 @@ class LoginViewModel
                         }
                     }
                 }
-            }
-        }
-
-        fun postAuthLogin(postLoginRequest: PostLoginRequest) {
-            viewModelScope.launch {
-                _postLoginResponse.value = postAuthLoginUseCase.postAuthLogin(postLoginRequest)
             }
         }
     }

@@ -13,12 +13,12 @@ properties.load(FileInputStream(rootProject.file("local.properties")))
 android {
     namespace = "com.catchmate.data"
 
-    val googleWebClientId = properties["google_web_client_id"] as? String ?: ""
     val serverDomain = properties["server_domain"] as? String ?: ""
+    val googleWebClientId = properties["google_web_client_id"] as? String ?: ""
 
     defaultConfig {
-        buildConfigField("String", "GOOGLE_WEB_CLIENT_ID", googleWebClientId)
         buildConfigField("String", "SERVER_DOMAIN", serverDomain)
+        buildConfigField("String", "GOOGLE_WEB_CLIENT_ID", googleWebClientId)
     }
 
     buildFeatures {
@@ -32,16 +32,14 @@ android {
 
 dependencies {
     implementation(project(":domain"))
-
-    implementation(libs.kakao.user)
-    implementation(libs.naver.user)
-    implementation(libs.androidx.credentials)
-    implementation(libs.androidx.credentials.play.services.auth)
-    implementation(libs.googleid)
     implementation(libs.google.api.client)
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.messaging)
+    implementation(libs.firebase.auth)
+    implementation(libs.androidx.credentials)
+    implementation(libs.androidx.credentials.play.services.auth)
+    implementation(libs.googleid)
 
     implementation(libs.retrofit)
     implementation(libs.converter.gson)

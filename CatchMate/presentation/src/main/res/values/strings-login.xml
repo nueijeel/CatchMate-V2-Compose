@@ -1,5 +1,5 @@
 <resources>
-    <string name="login_kakao">카카오 로그인</string>
+    <string name="login_btn_text">구글 로그인</string>
     <string name="login_divider_text">또는</string>
     <string name="login_sneak_peek"><u>일단 둘러볼게요</u></string>
 
