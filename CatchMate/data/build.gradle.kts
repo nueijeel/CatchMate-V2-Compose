@@ -14,9 +14,11 @@ android {
     namespace = "com.catchmate.data"
 
     val serverDomain = properties["server_domain"] as? String ?: ""
+    val googleWebClientId = properties["google_web_client_id"] as? String ?: ""
 
     defaultConfig {
         buildConfigField("String", "SERVER_DOMAIN", serverDomain)
+        buildConfigField("String", "GOOGLE_WEB_CLIENT_ID", googleWebClientId)
     }
 
     buildFeatures {
