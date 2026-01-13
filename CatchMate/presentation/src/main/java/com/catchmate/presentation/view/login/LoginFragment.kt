@@ -37,59 +37,47 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
     }
 
     private fun initViewModel() {
-        loginViewModel.postLoginRequest.observe(viewLifecycleOwner) { request ->
-            if (request != null) {
-                Log.i(
-                    "LoginFragment",
-                    "LoginRequest\n${request.email}\n${request.provider}\n" +
-                        "${request.providerId}\n${request.picture}\n${request.fcmToken}",
-                )
-                loginViewModel.postAuthLogin(request)
-            } else {
-                Log.d("로그인 취소", "로그인 취소")
-            }
-        }
-        loginViewModel.postLoginResponse.observe(viewLifecycleOwner) { loginResponse ->
-            if (loginResponse != null) {
-                Log.i(
-                    "LoginFragment",
-                    "LoginResponse\nacc:${loginResponse.accessToken}\n" +
-                        "ref:${loginResponse.refreshToken}\n bool:${loginResponse.isFirstLogin}",
-                )
-
-                when (loginResponse.isFirstLogin) {
-                    true -> {
-                        val postLoginRequest = loginViewModel.postLoginRequest.value!!
-                        val userInfo =
-                            PostUserAdditionalInfoRequest(
-                                postLoginRequest.email,
-                                postLoginRequest.providerId,
-                                postLoginRequest.provider,
-                                postLoginRequest.picture,
-                                postLoginRequest.fcmToken,
-                                "",
-                                "",
-                                "",
-                                -1,
-                                "",
-                            )
-                        val bundle = Bundle()
-                        bundle.putSerializable("userInfo", userInfo)
-                        findNavController().navigate(R.id.action_loginFragment_to_termsAndConditionFragment, bundle)
-                        loginViewModel.initPostLoginRequest()
-                        loginViewModel.initPostLoginResponse()
-                    }
-
-                    false -> {
-                        localDataViewModel.saveAccessToken(loginResponse.accessToken!!)
-                        localDataViewModel.saveRefreshToken(loginResponse.refreshToken!!)
-                        localDataViewModel.saveProvider(loginViewModel.postLoginRequest.value?.provider!!)
-                        mainViewModel.setGuestLogin(false)
-                        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-                    }
-                }
-            }
-        }
+//        loginViewModel.postLoginResponse.observe(viewLifecycleOwner) { loginResponse ->
+//            if (loginResponse != null) {
+//                Log.i(
+//                    "LoginFragment",
+//                    "LoginResponse\nacc:${loginResponse.accessToken}\n" +
+//                        "ref:${loginResponse.refreshToken}\n bool:${loginResponse.isFirstLogin}",
+//                )
+//
+//                when (loginResponse.isFirstLogin) {
+//                    true -> {
+//                        val postLoginRequest = loginViewModel.postLoginRequest.value!!
+//                        val userInfo =
+//                            PostUserAdditionalInfoRequest(
+//                                postLoginRequest.email,
+//                                postLoginRequest.providerId,
+//                                postLoginRequest.provider,
+//                                postLoginRequest.picture,
+//                                postLoginRequest.fcmToken,
+//                                "",
+//                                "",
+//                                "",
+//                                -1,
+//                                "",
+//                            )
+//                        val bundle = Bundle()
+//                        bundle.putSerializable("userInfo", userInfo)
+//                        findNavController().navigate(R.id.action_loginFragment_to_termsAndConditionFragment, bundle)
+//                        loginViewModel.initPostLoginRequest()
+//                        loginViewModel.initPostLoginResponse()
+//                    }
+//
+//                    false -> {
+//                        localDataViewModel.saveAccessToken(loginResponse.accessToken!!)
+//                        localDataViewModel.saveRefreshToken(loginResponse.refreshToken!!)
+//                        localDataViewModel.saveProvider(loginViewModel.postLoginRequest.value?.provider!!)
+//                        mainViewModel.setGuestLogin(false)
+//                        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+//                    }
+//                }
+//            }
+//        }
     }
 
     private fun initView() {
@@ -98,6 +86,9 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                 mainViewModel.setGuestLogin(true)
                 localDataViewModel.saveAccessToken("")
                 findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+            }
+            cvLogin.setOnClickListener {
+                loginViewModel.signWithGoogle(requireActivity())
             }
         }
     }

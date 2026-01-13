@@ -20,7 +20,6 @@ import javax.inject.Inject
 class SignUpViewModel
     @Inject
     constructor(
-        private val getAuthCheckNicknameUseCase: GetAuthCheckNicknameUseCase,
         private val postUserAdditionalInfoUseCase: PostUserAdditionalInfoUseCase,
         private val patchUserAlarmUseCase: PatchUserAlarmUseCase,
     ) : ViewModel() {
@@ -45,19 +44,7 @@ class SignUpViewModel
             get() = _userAdditionalInfoResponse
 
         fun getAuthCheckNickname(nickName: String) {
-            viewModelScope.launch {
-                val result = getAuthCheckNicknameUseCase.getAuthCheckNickname(nickName)
-                result
-                    .onSuccess { availability ->
-                        _getCheckNicknameResponse.value = availability
-                    }.onFailure { exception ->
-                        if (exception is ReissueFailureException) {
-                            _navigateToLogin.value = true
-                        } else {
-                            _errorMessage.value = exception.message
-                        }
-                    }
-            }
+
         }
 
         fun postUserAdditionalInfo(userAdditionalInfoRequest: PostUserAdditionalInfoRequest) {

@@ -9,5 +9,5 @@ class GetAuthCheckNicknameUseCase
     constructor(
         private val authRepository: AuthRepository,
     ) {
-        suspend fun getAuthCheckNickname(nickName: String): Result<GetCheckNicknameResponse> = authRepository.getAuthCheckNickname(nickName)
+
     }

@@ -1,12 +1,17 @@
 package com.catchmate.presentation.viewmodel
 
+import android.app.Activity
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.catchmate.domain.exception.GoogleLoginException
+import com.catchmate.domain.exception.Result
 import com.catchmate.domain.model.auth.PostLoginRequest
 import com.catchmate.domain.model.auth.PostLoginResponse
 import com.catchmate.domain.usecase.auth.PostAuthLoginUseCase
+import com.catchmate.domain.usecase.auth.SignInWithGoogleUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -15,27 +20,40 @@ import javax.inject.Inject
 class LoginViewModel
     @Inject
     constructor(
-        private val postAuthLoginUseCase: PostAuthLoginUseCase,
+        private val signWithGoogleUseCase: SignInWithGoogleUseCase,
     ) : ViewModel() {
-        private val _postLoginRequest = MutableLiveData<PostLoginRequest?>()
-        val postLoginRequest: LiveData<PostLoginRequest?>
-            get() = _postLoginRequest
-
-        private val _postLoginResponse = MutableLiveData<PostLoginResponse?>()
-        val postLoginResponse: LiveData<PostLoginResponse?>
-            get() = _postLoginResponse
-
-        fun initPostLoginRequest() {
-            _postLoginRequest.value = null
-        }
-
-        fun initPostLoginResponse() {
-            _postLoginResponse.value = null
-        }
-
-        fun postAuthLogin(postLoginRequest: PostLoginRequest) {
+        fun signWithGoogle(activity: Activity) {
             viewModelScope.launch {
-                _postLoginResponse.value = postAuthLoginUseCase.postAuthLogin(postLoginRequest)
+                val result = signWithGoogleUseCase.signInWithGoogle(activity)
+                when (result) {
+                    is Result.Success -> {
+                        Log.d("login vm", result.data)
+                    }
+
+                    is Result.Error -> {
+                        when (result.exception) {
+                            is GoogleLoginException.Cancelled -> {
+                                Log.e("GoogleLoginError", "로그인이 취소되었습니다.")
+                            }
+
+                            is GoogleLoginException.NoCredentials -> {
+                                "앱 로그인을 위해서 기기에 Google 계정을 등록해주세요."
+                            }
+
+                            is GoogleLoginException.TokenParsing -> {
+                                Log.e("GoogleLoginError", "로그인 정보 처리 중 오류가 발생했습니다.")
+                            }
+
+                            is GoogleLoginException.Unknown -> {
+                                Log.e("GoogleLoginError", "알 수 없는 오류가 발생했습니다.")
+                            }
+
+                            else -> {
+                                Log.e("GoogleLoginError", "로그인 중 오류가 발생했습니다.")
+                            }
+                        }
+                    }
+                }
             }
         }
     }

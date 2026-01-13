@@ -17,7 +17,6 @@ import javax.inject.Inject
 class AccountInfoViewModel
     @Inject
     constructor(
-        private val deleteAuthLogoutUseCase: DeleteAuthLogoutUseCase,
         private val deleteUserAccountUseCase: DeleteUserAccountUseCase,
     ) : ViewModel() {
         private val _logoutResponse = MutableLiveData<DeleteLogoutResponse>()
@@ -37,19 +36,7 @@ class AccountInfoViewModel
             get() = _navigateToLogin
 
         fun logout(refreshToken: String) {
-            viewModelScope.launch {
-                val result = deleteAuthLogoutUseCase.deleteAuthLogout(refreshToken)
-                result
-                    .onSuccess { response ->
-                        _logoutResponse.value = response
-                    }.onFailure { exception ->
-                        if (exception is ReissueFailureException) {
-                            _navigateToLogin.value = true
-                        } else {
-                            _errorMessage.value = exception.message
-                        }
-                    }
-            }
+
         }
 
         fun withdraw() {

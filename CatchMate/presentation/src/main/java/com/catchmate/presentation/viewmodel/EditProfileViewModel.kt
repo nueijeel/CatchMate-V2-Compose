@@ -20,7 +20,6 @@ import javax.inject.Inject
 class EditProfileViewModel
     @Inject
     constructor(
-        private val getAuthCheckNicknameUseCase: GetAuthCheckNicknameUseCase,
         private val patchUserProfileUseCase: PatchUserProfileUseCase,
     ) : ViewModel() {
         private val _profileImage = MutableLiveData<Bitmap>()
@@ -72,19 +71,7 @@ class EditProfileViewModel
         }
 
         fun getAuthCheckNickname(nickName: String) {
-            viewModelScope.launch {
-                val result = getAuthCheckNicknameUseCase.getAuthCheckNickname(nickName)
-                result
-                    .onSuccess { availability ->
-                        _getCheckNicknameResponse.value = availability
-                    }.onFailure { exception ->
-                        if (exception is ReissueFailureException) {
-                            _navigateToLogin.value = true
-                        } else {
-                            _errorMessage.value = exception.message
-                        }
-                    }
-            }
+
         }
 
         fun patchUserProfile(
