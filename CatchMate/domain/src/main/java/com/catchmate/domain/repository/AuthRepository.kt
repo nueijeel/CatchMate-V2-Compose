@@ -4,5 +4,5 @@ import android.app.Activity
 import com.catchmate.domain.exception.Result
 
 interface AuthRepository {
-    suspend fun signInWithGoogle(activity: Activity): Result<String>
+    suspend fun signInWithGoogle(activity: Activity): Result<Pair<String, String>>
 }

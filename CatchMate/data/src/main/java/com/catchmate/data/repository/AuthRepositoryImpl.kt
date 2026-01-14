@@ -4,7 +4,7 @@ import android.app.Activity
 import android.util.Log
 import androidx.credentials.exceptions.GetCredentialCancellationException
 import androidx.credentials.exceptions.NoCredentialException
-import com.catchmate.data.datasource.local.GoogleLoginDataSource
+import com.catchmate.data.datasource.remote.GoogleLoginDataSource
 import com.catchmate.domain.exception.GoogleLoginException
 import com.catchmate.domain.exception.Result
 import com.catchmate.domain.repository.AuthRepository
@@ -19,7 +19,7 @@ constructor(
     private val firebaseAuth: FirebaseAuth,
     private val googleLoginDataSource: GoogleLoginDataSource,
 ) : AuthRepository {
-    override suspend fun signInWithGoogle(activity: Activity): Result<String> {
+    override suspend fun signInWithGoogle(activity: Activity): Result<Pair<String, String>> {
         return try {
             val idToken = googleLoginDataSource.getGoogleIdToken(activity)
 
@@ -30,7 +30,8 @@ constructor(
                 val authResult = firebaseAuth.signInWithCredential(credential).await()
 
                 if (authResult.user != null) {
-                    Result.Success("${authResult.user?.uid} / ${authResult.user?.email}")
+                    val resultPair = Pair(authResult.user?.uid ?: "", authResult.user?.email ?: "")
+                    Result.Success(resultPair)
                 } else {
                     Result.Error(exception = GoogleLoginException.Unknown(Exception("Firebase user is null")))
                 }
