@@ -6,6 +6,7 @@ import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.catchmate.domain.model.auth.UserEntity
 import com.catchmate.domain.model.user.PostUserAdditionalInfoRequest
 import com.catchmate.presentation.R
 import com.catchmate.presentation.databinding.FragmentLoginBinding
@@ -78,6 +79,21 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
 //                }
 //            }
 //        }
+        loginViewModel.resultPair.observe(viewLifecycleOwner) { resultPair ->
+            if (resultPair.first.isNotEmpty() && resultPair.second.isNotEmpty()) {
+                val user = UserEntity(
+                    email = resultPair.second,
+                    profileImage = null,
+                    nickname = "",
+                    favoriteClubId = 0,
+                    gender = "",
+                    watchStyle = null,
+                    fcmToken = "",
+                    birthDate = "",
+                )
+                loginViewModel.saveUserData(resultPair.first, user)
+            }
+        }
     }
 
     private fun initView() {

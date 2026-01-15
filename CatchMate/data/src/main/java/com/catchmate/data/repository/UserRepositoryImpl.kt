@@ -1,10 +1,12 @@
 package com.catchmate.data.repository
 
 import com.catchmate.data.datasource.remote.RetrofitClient
+import com.catchmate.data.datasource.remote.UserRemoteDataSource
 import com.catchmate.data.datasource.remote.UserService
 import com.catchmate.data.mapper.UserMapper
 import com.catchmate.data.util.ApiResponseHandleUtil.apiCall
 import com.catchmate.domain.exception.UserBlockFailureException
+import com.catchmate.domain.model.auth.UserEntity
 import com.catchmate.domain.model.user.DeleteBlockedUserResponse
 import com.catchmate.domain.model.user.DeleteUserAccountResponse
 import com.catchmate.domain.model.user.GetBlockedUserListResponse
@@ -25,6 +27,7 @@ class UserRepositoryImpl
     @Inject
     constructor(
         retrofitClient: RetrofitClient,
+        private val userRemoteDataSource: UserRemoteDataSource,
     ) : UserRepository {
         private val userApi = retrofitClient.createApi<UserService>()
         private val tag = "UserRepo"
@@ -121,4 +124,17 @@ class UserRepositoryImpl
                 apiFunction = { userApi.deleteUserAccount() },
                 transform = { UserMapper.toDeleteUserAccountResponse(it!!) },
             )
+
+        // v2
+        override suspend fun saveUser(uid: String, user: UserEntity): Result<Unit> {
+            return try {
+                val userDto = UserMapper.toUserDto(user)
+
+                userRemoteDataSource.saveUser(uid, userDto)
+
+                Result.success(Unit)
+            } catch (e: Exception) {
+                Result.failure(e)
+            }
+        }
     }
