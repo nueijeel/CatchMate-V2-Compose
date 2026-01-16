@@ -38,62 +38,29 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
     }
 
     private fun initViewModel() {
-//        loginViewModel.postLoginResponse.observe(viewLifecycleOwner) { loginResponse ->
-//            if (loginResponse != null) {
-//                Log.i(
-//                    "LoginFragment",
-//                    "LoginResponse\nacc:${loginResponse.accessToken}\n" +
-//                        "ref:${loginResponse.refreshToken}\n bool:${loginResponse.isFirstLogin}",
-//                )
-//
-//                when (loginResponse.isFirstLogin) {
-//                    true -> {
-//                        val postLoginRequest = loginViewModel.postLoginRequest.value!!
-//                        val userInfo =
-//                            PostUserAdditionalInfoRequest(
-//                                postLoginRequest.email,
-//                                postLoginRequest.providerId,
-//                                postLoginRequest.provider,
-//                                postLoginRequest.picture,
-//                                postLoginRequest.fcmToken,
-//                                "",
-//                                "",
-//                                "",
-//                                -1,
-//                                "",
-//                            )
-//                        val bundle = Bundle()
-//                        bundle.putSerializable("userInfo", userInfo)
-//                        findNavController().navigate(R.id.action_loginFragment_to_termsAndConditionFragment, bundle)
-//                        loginViewModel.initPostLoginRequest()
-//                        loginViewModel.initPostLoginResponse()
-//                    }
-//
-//                    false -> {
-//                        localDataViewModel.saveAccessToken(loginResponse.accessToken!!)
-//                        localDataViewModel.saveRefreshToken(loginResponse.refreshToken!!)
-//                        localDataViewModel.saveProvider(loginViewModel.postLoginRequest.value?.provider!!)
-//                        mainViewModel.setGuestLogin(false)
-//                        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-//                    }
-//                }
-//            }
-//        }
-        loginViewModel.resultPair.observe(viewLifecycleOwner) { resultPair ->
-            if (resultPair.first.isNotEmpty() && resultPair.second.isNotEmpty()) {
-                val user = UserEntity(
-                    email = resultPair.second,
-                    profileImage = null,
-                    nickname = "",
-                    favoriteClubId = 0,
-                    gender = "",
-                    watchStyle = null,
-                    fcmToken = "",
-                    birthDate = "",
-                )
-                loginViewModel.saveUserData(resultPair.first, user)
+        loginViewModel.resultTriple.observe(viewLifecycleOwner) { resultTriple ->
+            if (resultTriple.first.isNotEmpty() && resultTriple.second.isNotEmpty()) {
+                if (resultTriple.third) { // 신규 가입일 경우
+                    val user = UserEntity(
+                        email = resultTriple.second,
+                        profileImage = null,
+                        nickname = "",
+                        favoriteClubId = 0,
+                        gender = "",
+                        watchStyle = null,
+                        fcmToken = "",
+                        birthDate = "",
+                    )
+                    loginViewModel.saveUserData(resultTriple.first, user)
+                } else { // 기존에 가입한 적 있을 경우
+                    // 로컬 데이터 닉네임 필드 값 isEmpty
+                    // T: AddInfoFragment 이동
+                    // F: HomeFragment 이동
+
+                }
             }
         }
+        // saveUserData Result success일 경우 datastore에 데이터 저장 후 addinfo page로 이동
     }
 
     private fun initView() {

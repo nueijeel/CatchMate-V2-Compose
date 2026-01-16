@@ -11,6 +11,7 @@ class UserRemoteDataSourceImpl
 constructor(
     private val firestore: FirebaseFirestore
 ) : UserRemoteDataSource {
+    // 유저 데이터 저장
     override suspend fun saveUser(uid: String, userDto: UserDto) {
         firestore.collection("users")
             .document(uid)

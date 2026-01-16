@@ -22,17 +22,17 @@ class LoginViewModel
         private val signWithGoogleUseCase: SignInWithGoogleUseCase,
         private val saveUserDataUseCase: SaveUserDataUseCase,
     ) : ViewModel() {
-        private var _resultPair = MutableLiveData<Pair<String, String>>()
-        val resultPair: LiveData<Pair<String, String>>
-            get() = _resultPair
+        private var _resultTriple = MutableLiveData<Triple<String, String, Boolean>>()
+        val resultTriple: LiveData<Triple<String, String, Boolean>>
+            get() = _resultTriple
 
         fun signWithGoogle(activity: Activity) {
             viewModelScope.launch {
                 val result = signWithGoogleUseCase.signInWithGoogle(activity)
                 when (result) {
                     is Result.Success -> {
-                        Log.d("login vm", "uid : ${result.data.first} / email : ${result.data.second}")
-                        _resultPair.value = result.data
+                        Log.d("login vm", "uid : ${result.data.first} / email : ${result.data.second} / isNewUser : ${result.data.third}")
+                        _resultTriple.value = result.data
                     }
 
                     is Result.Error -> {

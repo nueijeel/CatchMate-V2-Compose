@@ -10,5 +10,5 @@ class SignInWithGoogleUseCase
     constructor(
         private val authRepository: AuthRepository,
     ) {
-        suspend fun signInWithGoogle(activity: Activity): Result<Pair<String, String>> = authRepository.signInWithGoogle(activity)
+        suspend fun signInWithGoogle(activity: Activity): Result<Triple<String, String, Boolean>> = authRepository.signInWithGoogle(activity)
     }

@@ -19,7 +19,7 @@ constructor(
     private val firebaseAuth: FirebaseAuth,
     private val googleLoginDataSource: GoogleLoginDataSource,
 ) : AuthRepository {
-    override suspend fun signInWithGoogle(activity: Activity): Result<Pair<String, String>> {
+    override suspend fun signInWithGoogle(activity: Activity): Result<Triple<String, String, Boolean>> {
         return try {
             val idToken = googleLoginDataSource.getGoogleIdToken(activity)
 
@@ -30,8 +30,11 @@ constructor(
                 val authResult = firebaseAuth.signInWithCredential(credential).await()
 
                 if (authResult.user != null) {
-                    val resultPair = Pair(authResult.user?.uid ?: "", authResult.user?.email ?: "")
-                    Result.Success(resultPair)
+                    val uid = authResult.user?.uid ?: ""
+                    val email = authResult.user?.email ?: ""
+                    val isNewUser = authResult.additionalUserInfo?.isNewUser ?: false
+                    val triple = Triple(uid, email, isNewUser)
+                    Result.Success(triple)
                 } else {
                     Result.Error(exception = GoogleLoginException.Unknown(Exception("Firebase user is null")))
                 }
