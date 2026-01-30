@@ -1,5 +1,7 @@
 package com.catchmate.data.di
 
+import com.catchmate.data.datasource.remote.UserRemoteDataSource
+import com.catchmate.data.datasource.remote.impl.UserRemoteDataSourceImpl
 import com.catchmate.data.repository.AuthRepositoryImpl
 import com.catchmate.domain.repository.AuthRepository
 import com.google.firebase.auth.FirebaseAuth
@@ -21,4 +23,7 @@ object AuthModule {
     fun provideFirebaseAuth(): FirebaseAuth {
         return FirebaseAuth.getInstance()
     }
+
+    @Provides
+    fun provideUserRemoteDataSource(userRemoteDataSourceImpl: UserRemoteDataSourceImpl): UserRemoteDataSource = userRemoteDataSourceImpl
 }

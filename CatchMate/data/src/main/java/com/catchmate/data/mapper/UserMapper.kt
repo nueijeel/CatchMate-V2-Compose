@@ -1,5 +1,6 @@
 package com.catchmate.data.mapper
 
+import com.catchmate.data.dto.auth.UserDto
 import com.catchmate.data.dto.user.DeleteBlockedUserResponseDTO
 import com.catchmate.data.dto.user.DeleteUserAccountResponseDTO
 import com.catchmate.data.dto.user.GetBlockedUserListResponseDTO
@@ -12,6 +13,7 @@ import com.catchmate.data.dto.user.PostUserAdditionalInfoRequestDTO
 import com.catchmate.data.dto.user.PostUserAdditionalInfoResponseDTO
 import com.catchmate.data.dto.user.PostUserBlockResponseDTO
 import com.catchmate.data.mapper.BoardMapper.toFavoriteClub
+import com.catchmate.domain.model.auth.UserEntity
 import com.catchmate.domain.model.user.DeleteBlockedUserResponse
 import com.catchmate.domain.model.user.DeleteUserAccountResponse
 import com.catchmate.domain.model.user.GetBlockedUserListResponse
@@ -120,5 +122,18 @@ object UserMapper {
     fun toDeleteUserAccountResponse(dto: DeleteUserAccountResponseDTO): DeleteUserAccountResponse =
         DeleteUserAccountResponse(
             state = dto.state,
+        )
+
+    // v2
+    fun toUserDto(user: UserEntity): UserDto =
+        UserDto(
+            email = user.email,
+            profileImage = user.profileImage,
+            nickname = user.nickname,
+            favoriteClubId = user.favoriteClubId,
+            gender = user.gender,
+            watchStyle = user.watchStyle,
+            fcmToken = user.fcmToken,
+            birthDate = user.birthDate,
         )
 }

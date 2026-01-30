@@ -8,9 +8,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.catchmate.domain.exception.GoogleLoginException
 import com.catchmate.domain.exception.Result
-import com.catchmate.domain.model.auth.PostLoginRequest
-import com.catchmate.domain.model.auth.PostLoginResponse
-import com.catchmate.domain.usecase.auth.PostAuthLoginUseCase
+import com.catchmate.domain.model.auth.UserEntity
+import com.catchmate.domain.usecase.auth.SaveUserDataUseCase
 import com.catchmate.domain.usecase.auth.SignInWithGoogleUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -21,13 +20,19 @@ class LoginViewModel
     @Inject
     constructor(
         private val signWithGoogleUseCase: SignInWithGoogleUseCase,
+        private val saveUserDataUseCase: SaveUserDataUseCase,
     ) : ViewModel() {
+        private var _resultTriple = MutableLiveData<Triple<String, String, Boolean>>()
+        val resultTriple: LiveData<Triple<String, String, Boolean>>
+            get() = _resultTriple
+
         fun signWithGoogle(activity: Activity) {
             viewModelScope.launch {
                 val result = signWithGoogleUseCase.signInWithGoogle(activity)
                 when (result) {
                     is Result.Success -> {
-                        Log.d("login vm", result.data)
+                        Log.d("login vm", "uid : ${result.data.first} / email : ${result.data.second} / isNewUser : ${result.data.third}")
+                        _resultTriple.value = result.data
                     }
 
                     is Result.Error -> {
@@ -53,6 +58,20 @@ class LoginViewModel
                             }
                         }
                     }
+                }
+            }
+        }
+
+        fun saveUserData(uid: String, user: UserEntity) {
+            viewModelScope.launch {
+                val result = saveUserDataUseCase(uid, user)
+
+                result.onSuccess {
+                    // 작업 성공
+                    Log.d("save user data", "success")
+                }.onFailure {
+                    // 에러 처리
+                    Log.d("save user data", "failure")
                 }
             }
         }

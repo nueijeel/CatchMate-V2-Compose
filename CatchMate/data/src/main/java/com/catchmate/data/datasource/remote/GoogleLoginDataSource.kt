@@ -1,4 +1,4 @@
-package com.catchmate.data.datasource.local
+package com.catchmate.data.datasource.remote
 
 import android.app.Activity
 import android.util.Log
